@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 18px;
+}
+.circle-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: block;
+    border: 3px solid #FF4C01;
+    box-shadow: 0 0 0 2px #FD9E04;
+    margin-top: 100px
+}
+.header{
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+}
+#header-img{
+    background-image: url("../resources/art/osu! Halloween 2022 Fanart.png");
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+}
+.Title{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+    line-height: 21px;
+}
+
+.Title h1{
+    font-weight: 700;
+    line-height: 60px;
+    font-size: 28px;
+    text-align: center;
+}
+.Title p{
+    font-weight: 300;
+    font-size: 12px;
+    max-width: 300px;
+    margin: auto;
+}
+.Title svg{
+    margin-top: 21px;
+    width: 198px;
+    height: 6px;
+    background: linear-gradient(94.94deg, #FD9E04, #FF4C01);
+    border-radius: 75px;
+}
+.commission-btn{
+    cursor: pointer;
+    top: 21px;
+    width: 252px;
+    position: relative;
+    display: inline-block;
+    font-style: bold;
+    font-size: 18px;
+    color: white;
+    line-height:43px;
+
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(94.94deg, #FD9E04, #FF4C01);
+    border-radius: 75px;
+}
+.commission-btn:hover{
+    background: white;
+    color:black;
+}
+#osu img {
+    filter: invert(1);
+}
+.external-links{
+    margin-top: 15px;
+    align-items: center;
+}
+
+.external-links img{
+    width: 30px;
+    height: auto;
+}
+.external-links ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 4px 4px;
+}
+.external-links p{
+    position: absolute;
+    display: block;
+    
+    margin-top: -15px;
+    color: transparent;
+    font-weight: 500;
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    margin-top: auto;
+  }
+  
