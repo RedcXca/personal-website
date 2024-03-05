@@ -19,13 +19,12 @@ html {
   box-shadow: 0 0 0 2px #fd9e04;
   margin-top: 100px;
 }
-.header {
+.info {
   height: 100vh;
   min-height: 600px;
   width: 100%;
   position: relative;
-}
-#header-img {
+  overflow: auto;
   background-image: url("../resources/art/osu! Halloween 2022 Fanart.png");
   background-color: rgb(0, 0, 0, 0.5);
   background-blend-mode: multiply;
@@ -90,7 +89,6 @@ html {
   margin-top: 15px;
   align-items: center;
 }
-
 .external-links img {
   width: 30px;
   height: auto;
@@ -104,7 +102,6 @@ html {
 .external-links p {
   position: absolute;
   display: block;
-
   margin-top: -15px;
   color: transparent;
   font-weight: 500;
