@@ -28,7 +28,7 @@ html {
   background-image: url("../resources/art/osu! Halloween 2022 Fanart.png");
   background-color: rgb(0, 0, 0, 0.5);
   background-blend-mode: multiply;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 }
 .Title {
