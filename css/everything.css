@@ -143,9 +143,14 @@ html {
   height: auto;
   display: block;
   margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+.image-grid img:hover {
+  transform: scale(1.1);
 }
 .gallery-section {
   padding: 20px;
+  background-color: #1f1e22;
 }
 .gallery-header {
   text-align: center;
