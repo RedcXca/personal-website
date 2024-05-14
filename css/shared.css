@@ -63,15 +63,15 @@ footer {
   color: #fff;
   margin-top: auto;
 }
-.large-text {
+.large-footer-text {
   font-size: 12px;
   padding-top: 10px;
   padding-bottom: 5px;
   top: 200px;
 }
-.small-text {
+.small-footer-text {
   font-size: 10px;
 }
-.bottom-text {
+.bottom-footer-text {
   padding-bottom: 10px;
 }
