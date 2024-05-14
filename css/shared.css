@@ -63,3 +63,15 @@ footer {
   color: #fff;
   margin-top: auto;
 }
+.large-text {
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  top: 200px;
+}
+.small-text {
+  font-size: 10px;
+}
+.bottom-text {
+  padding-bottom: 10px;
+}
