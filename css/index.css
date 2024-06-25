@@ -4,10 +4,11 @@
   min-height: 600px;
   width: 100%;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   background-image: url("../resources/art/osu! Halloween 2022 Fanart.webp");
   background-position: top;
   background-size: cover;
+  padding-bottom: 120px;
 }
 .hero::before {
   content: "";
@@ -26,7 +27,7 @@
   display: block;
   border: 3px solid #ff4c01;
   box-shadow: 0 0 0 2px #fd9e04;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 .title {
   width: 100%;
@@ -108,7 +109,7 @@
 }
 
 
-/* Work/Fanrt Section */
+/* Work/Fanart Section */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
