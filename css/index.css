@@ -8,7 +8,7 @@
   background-image: url("../resources/art/osu! Halloween 2022 Fanart.webp");
   background-position: top;
   background-size: cover;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
 }
 .hero::before {
   content: "";
@@ -50,7 +50,7 @@
 .title p {
   font-weight: 300;
   font-size: 20px;
-  max-width: 30vw;
+  max-width: 20vw;
   margin: auto;
   margin-top: 10px;
 }
