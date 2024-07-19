@@ -1,0 +1,194 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 20vh;
+  margin-left: 10vw;
+  font-weight: 500;
+  height: 100vh;
+
+  h1 {
+    text-align: left;
+    padding-left: 1rem;
+    font-weight: 800;
+    font-size: 5rem;
+    letter-spacing: 0.02rem;
+    color: #fff;
+    text-transform: none;
+    opacity: 0.85;
+    mix-blend-mode: exclusion; // Messing with some text styling, you can comment this out if you think it looks bad
+  }
+
+  .circle-image {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    border: 3px solid #ff4c01;
+    box-shadow: 0 0 0 2px #fd9e04;
+    animation: 1.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) 0.2s both avatar;
+    border-radius: 50%;
+    width: clamp(120px, 26vmin, 200px);
+    height: clamp(120px, 26vmin, 200px);
+    pointer-events: none;
+  }
+
+  @keyframes avatar {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    a {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 1rem;
+
+      &.commission-btn {
+        cursor: pointer;
+        padding: 16px 2rem;
+        margin-left: 1rem;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
+        border-radius: 75px;
+      }
+
+      &.commission-btn:hover {
+        background: white;
+        color: black;
+      }
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+#gallery-preview {
+  padding: 2rem;
+  background-color: #1f1f1f;
+
+  .gallery-container {
+    position: relative;
+    overflow: hidden; // Hide overflow to keep arrows outside the scrollable area
+  }
+
+  .gallery-scroll {
+    display: flex;
+    overflow-x: scroll; // Allow horizontal scrolling
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+
+    img {
+      height: 20rem;
+      object-fit: cover;
+      flex-shrink: 0; // Prevent images from shrinking
+    }
+  }
+
+  .arrow {
+    position: absolute; // Position arrows absolutely
+    top: 50%; // Center vertically
+    transform: translateY(-50%); // Adjust for perfect centering
+    background: rgba(0, 0, 0, 0.3); // Semi-transparent background
+    color: #fff;
+    border: none;
+    font-size: 2rem; // Adjust size as needed
+    padding: 0.5rem; // Add padding for clickable area
+    cursor: pointer;
+    z-index: 20; // Ensure arrows are above the images and background
+
+    &#left-arrow {
+      left: 0; // Position outside the left edge
+    }
+
+    &#right-arrow {
+      right: 0; // Position outside the right edge
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7); // Darken on hover
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .view-gallery {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
+    border-radius: 75px;
+  }
+}
+
+.hidden {
+  display: none; // Hides the element
+}
+
+#info-box-container {
+  margin: 5rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  #info-box {
+    width: 40vw;
+    background-color: #333333a9;
+    color: #ffffff;
+    border-radius: 3rem;
+    padding: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+}
