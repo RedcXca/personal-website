@@ -10,7 +10,7 @@ header {
 }
 header h1 {
   text-align: left;
-  padding-left: 1rem;
+  padding-left: 0;
   font-weight: 800;
   font-size: 5rem;
   letter-spacing: 0.02rem;
@@ -44,7 +44,6 @@ header .circle-image {
 header section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 header ul {
   padding-left: 0;
@@ -56,12 +55,15 @@ header ul {
 header ul a {
   width: 100%;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+}
+header ul a#osu {
+  padding-left: 0;
 }
 header ul a.commission-btn {
   cursor: pointer;
-  padding: 16px 2rem;
-  margin-left: 1rem;
+  padding: 16px 1.95rem;
+  margin-left: 0.5rem;
   display: flex;
   font-size: 1.5rem;
   font-weight: 800;
@@ -96,12 +98,21 @@ header ul a img {
   gap: 1rem;
   padding-bottom: 1rem;
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-#gallery-preview .gallery-scroll img {
+#gallery-preview .gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+#gallery-preview .gallery-scroll .gallery-content {
+  display: inline-block;
+  white-space: nowrap;
+}
+#gallery-preview .gallery-scroll .gallery-content img {
+  display: inline-block;
   height: 20rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  flex-shrink: 0;
+  width: auto;
+  margin-right: 1rem;
 }
 #gallery-preview .arrow {
   position: absolute;
@@ -156,7 +167,7 @@ header ul a img {
   align-items: center;
 }
 #info-box-container #info-box {
-  width: 40vw;
+  width: 60vw;
   background-color: rgba(51, 51, 51, 0.662745098);
   color: #ffffff;
   border-radius: 3rem;
@@ -169,5 +180,5 @@ header ul a img {
 }
 #info-box-container #info-box p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }/*# sourceMappingURL=index.css.map */
