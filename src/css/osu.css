@@ -1,0 +1,38 @@
+header {
+  height: 40vh;
+}
+header h1 {
+  font-size: 4rem;
+  padding-top: 20vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #dedede;
+  font-weight: 900;
+}
+
+.osu-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.osu-container img {
+  max-width: 40vw;
+  height: auto;
+  padding-left: 10vw;
+}
+.osu-container .osu-description {
+  padding: 0 6rem;
+}
+.osu-container .osu-description h3 {
+  font-size: 1.5rem;
+  color: #58fcff;
+  font-weight: 600;
+}
+.osu-container .osu-description p {
+  font-size: 1rem;
+  color: #dedede;
+  line-height: 1.6;
+  font-weight: 500;
+}/*# sourceMappingURL=osu.css.map */
