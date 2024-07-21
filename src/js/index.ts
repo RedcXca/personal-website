@@ -57,4 +57,13 @@ $(() => {
         // Update visibility on scroll
         $galleryScroll.on("scroll", updateArrowVisibility);
     }
+
+    // Parallax scrolling effect for the .hero section
+    window.addEventListener("scroll", function () {
+        const parallax = document.querySelector(".hero") as HTMLElement;
+        if (parallax) {
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = scrollPosition * 0.05 + "px";
+        }
+    });
 });

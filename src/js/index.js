@@ -27,17 +27,25 @@ $(function () {
             var _a;
             var currentScrollLeft = (_a = $galleryScroll.scrollLeft()) !== null && _a !== void 0 ? _a : 0; // Use nullish coalescing operator
             $galleryScroll.animate({
-                scrollLeft: currentScrollLeft - scrollAmount_1,
+                scrollLeft: currentScrollLeft - scrollAmount_1
             }, 400, updateArrowVisibility); // Update visibility after animation
         });
         $rightArrow.on("click", function () {
             var _a;
             var currentScrollLeft = (_a = $galleryScroll.scrollLeft()) !== null && _a !== void 0 ? _a : 0; // Use nullish coalescing operator
             $galleryScroll.animate({
-                scrollLeft: currentScrollLeft + scrollAmount_1,
+                scrollLeft: currentScrollLeft + scrollAmount_1
             }, 400, updateArrowVisibility); // Update visibility after animation
         });
         // Update visibility on scroll
         $galleryScroll.on("scroll", updateArrowVisibility);
     }
+    // Parallax scrolling effect for the .hero section
+    window.addEventListener("scroll", function () {
+        var parallax = document.querySelector(".hero");
+        if (parallax) {
+            var scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = scrollPosition * 0.05 + "px";
+        }
+    });
 });

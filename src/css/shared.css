@@ -117,7 +117,8 @@ nav .nav-link-wrapper ul li a:hover {
   object-fit: cover;
   background-size: cover;
   background-position: center;
-  background-image: url("../images/art/osu! Halloween 2022 Fanart.webp");
+  background-image: url("../images/art/Touhou.jpg");
+  overflow: hidden;
 }
 .hero::before {
   content: "";
