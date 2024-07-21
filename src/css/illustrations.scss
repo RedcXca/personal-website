@@ -44,17 +44,8 @@ section {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
-  }
-
-  a {
-    text-align: center;
-    padding: 0.5rem 0.5rem;
-    
-    &#osu {
-      padding-left: 0;
-    }
-
-    &.commission-btn {
+  
+    a {
       cursor: pointer;
       margin-left: 0.5rem;
       margin-bottom: 0.5rem;
@@ -66,11 +57,13 @@ section {
       align-items: center;
       background: none;
       border: none;
-    }
-
-    &.commission-btn:hover {
-      color: #fd9e04;
       text-decoration: none;
+      padding: 0.5rem 0.5rem;
+  
+      &:hover {
+        color: #fd9e04;
+        text-decoration: none;
+      }
     }
   }
 }

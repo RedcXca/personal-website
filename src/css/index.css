@@ -104,7 +104,9 @@ header ul a img {
 }
 
 #gallery-preview {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: #1f1f1f;
 }
 #gallery-preview .gallery-container {
@@ -157,21 +159,26 @@ header ul a img {
 #gallery-preview .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  padding-bottom: 1rem;
 }
-#gallery-preview .view-gallery {
-  display: inline-block;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+#gallery-preview .button-container a {
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
   font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: none;
+  border: none;
   text-decoration: none;
-  background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
-  border-radius: 75px;
+  padding: 0.5rem 0.5rem;
+}
+#gallery-preview .button-container a:hover {
+  color: #fd9e04;
+  text-decoration: none;
 }
 
 .hidden {

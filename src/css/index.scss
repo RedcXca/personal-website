@@ -118,7 +118,9 @@ header {
 }
 
 #gallery-preview {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: #1f1f1f;
 
   .gallery-container {
@@ -185,27 +187,34 @@ header {
   .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    padding-bottom: 1rem;
+  
+    a {
+      cursor: pointer;
+      margin-left: 0.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      font-size: 1rem;
+      color: white;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      background: none;
+      border: none;
+      text-decoration: none;
+      padding: 0.5rem 0.5rem;
+  
+      &:hover {
+        color: #fd9e04;
+        text-decoration: none;
+      }
+    }
   }
-
-  .view-gallery {
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
-    border-radius: 75px;
-  }
+  
 }
 
 .hidden {
-  display: none; // Hides the element
+  display: none;
 }
 
 #info-box-container {
