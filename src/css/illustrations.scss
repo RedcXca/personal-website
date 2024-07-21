@@ -20,11 +20,12 @@ section {
   h2 {
     padding-top: 1rem;
     font-size: 2rem;
+    font-weight: 700;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: #ff4d01a4;
+    color: #dedede;
   }
 
   .illustrations-container {
@@ -36,6 +37,40 @@ section {
     padding-bottom: 3rem;
     img {
       width: 30vw;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  a {
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    
+    &#osu {
+      padding-left: 0;
+    }
+
+    &.commission-btn {
+      cursor: pointer;
+      margin-left: 0.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      font-size: 1rem;
+      color: white;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      background: none;
+      border: none;
+    }
+
+    &.commission-btn:hover {
+      color: #fd9e04;
+      text-decoration: none;
     }
   }
 }

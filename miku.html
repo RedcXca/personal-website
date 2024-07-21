@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <link rel="icon" href="resources/images/%E6%97%A9%E5%AE%89.png" type="image/x-icon" />
+    <title>Miku</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/miku.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-  <link rel="icon" href="resources/images/%E6%97%A9%E5%AE%89.png" type="image/x-icon">
-  <title>Miku</title>
-  <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/miku.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <section class="nav-bar">
-    <h2><a href="index.html#home" class="nav-link">Home</a></h2>
-    <h2><a href="index.html#portfolio" class="nav-link">Portfolio</a></h2>
-    <h2><a href="miku.html" class="nav-link active-link">Miku</a></h2>
-  </section>
-  <section class="hero">
-    <div class="title">
-      <img src="resources/miku/fufuan.webp" class="rectangle-image" alt="fufuan">
-      <div class="title-text">
-        <h1>Miku Photos</h1>
-        <p>Hey! This is a Miku plush that I bought from Anime North 2022 and have been taking around to take photos in
-          place of me! Take a look at the places she's been below!</p>
+  <body>
+    <section class="nav-bar">
+      <h2><a href="index.html#home" class="nav-link">Home</a></h2>
+      <h2><a href="index.html#portfolio" class="nav-link">Portfolio</a></h2>
+      <h2><a href="miku.html" class="nav-link active-link">Miku</a></h2>
+    </section>
+    <section class="hero">
+      <div class="title">
+        <img src="resources/miku/fufuan.webp" class="rectangle-image" alt="fufuan" />
+        <div class="title-text">
+          <h1>Miku Photos</h1>
+          <p>
+            Hey! This is a Miku plush that I bought from Anime North 2022 and have been taking around to take photos in
+            place of me! Take a look at the places she's been below!
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="text-bar">
-    <h2 class="text-content">Japan/Korea 2024</h2>
-  </section>
-  <section class="hero">
-    <div class="text">
-      <h1>Placeholder for my image gallery</h1>
-      <p>More stuff to add: osu, hobbies, cool shit I did, music I like</p>
-    </div>
-  </section>
-  <footer>
-    <p class="large-footer-text"><b>ART & DESIGN © 2024 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
-    <p class="small-footer-text">And some more small text probably no one is going to see.</p>
-    <p class="small-footer-text bottom-footer-text">This entire site is like 50 lines of HTML I wrote for practice.</p>
-  </footer>
-  <script>
-    window.addEventListener("scroll", function () {
-      const parallax = document.querySelector(".hero");
-      let scrollPosition = window.pageYOffset;
+    </section>
+    <section class="text-bar">
+      <h2 class="text-content">Japan/Korea 2024</h2>
+    </section>
+    <section class="hero">
+      <div class="text">
+        <h1>Placeholder for my image gallery</h1>
+        <p>More stuff to add: osu, hobbies, cool shit I did, music I like</p>
+      </div>
+    </section>
+    <footer>
+      <p class="large-footer-text"><b>ART & DESIGN © 2024 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
+      <p class="small-footer-text">And some more small text probably no one is going to see.</p>
+      <p class="small-footer-text bottom-footer-text">
+        This entire site is like 50 lines of HTML I wrote for practice.
+      </p>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const parallax = document.querySelector(".hero");
+        let scrollPosition = window.pageYOffset;
 
-      parallax.style.backgroundPositionY = scrollPosition * 0.4 + "px";
-    });
-  </script>
-</body>
-
+        parallax.style.backgroundPositionY = scrollPosition * 0.4 + "px";
+      });
+    </script>
+  </body>
 </html>

@@ -19,11 +19,12 @@ section {
 section h2 {
   padding-top: 1rem;
   font-size: 2rem;
+  font-weight: 700;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: rgba(255, 77, 1, 0.6431372549);
+  color: #dedede;
 }
 section .illustrations-container {
   display: flex;
@@ -35,4 +36,35 @@ section .illustrations-container {
 }
 section .illustrations-container img {
   width: 30vw;
-}/*# sourceMappingURL=illustrations.css.map */
+}
+section .button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+section a {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+section a#osu {
+  padding-left: 0;
+}
+section a.commission-btn {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  font-size: 1rem;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
+section a.commission-btn:hover {
+  color: #fd9e04;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=illustrations.css.map */

@@ -27,6 +27,15 @@ html {
   font-weight: 400;
   font-size: 18px; // Defines 1rem
 
+  // IE Scrollbar styles
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+
   ::-webkit-scrollbar {
     width: 11px;
     height: 3px;
@@ -51,15 +60,6 @@ html {
   ::-webkit-resizer {
     background-color: #666;
   }
-
-  // IE Scrollbar styles
-  scrollbar-face-color: #646464;
-  scrollbar-base-color: #646464;
-  scrollbar-3dlight-color: #646464;
-  scrollbar-highlight-color: #646464;
-  scrollbar-track-color: #000;
-  scrollbar-arrow-color: #000;
-  scrollbar-shadow-color: #646464;
 }
 
 nav {
@@ -79,6 +79,14 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        color: #fd9e04; // Optional: add hover effect
+      }
+    }
   }
 
   .nav-link-wrapper {
@@ -155,8 +163,12 @@ footer {
   background-color: #000;
   padding: 1rem;
   text-align: center;
-
   color: #dedede;
+
+  p {
+    margin: 0;
+  }
+
   a {
     text-decoration: none;
     font-weight: 700;
@@ -168,15 +180,11 @@ footer {
   }
 
   .large-footer-text {
-    font-size: 12px;
+    font-size: 16px;
     padding-top: 10px;
-    padding-bottom: 5px;
-    top: 200px;
   }
   .small-footer-text {
-    font-size: 10px;
-  }
-  .bottom-footer-text {
+    font-size: 12px;
     padding-bottom: 10px;
   }
 }

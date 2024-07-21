@@ -18,6 +18,17 @@ header {
   flex-direction: row;
   width: 100vw;
 
+  h2 {
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #dedede;
+  }
+
   img {
     max-width: 40vw;
     height: auto;
@@ -26,14 +37,8 @@ header {
 
   .osu-description {
     padding: 0 6rem;
-    h3 {
-      font-size: 1.5rem;
-      color: #58fcff;
-      font-weight: 600;
-    }
-
     p {
-      font-size: 1rem;
+      font-size: 1.5rem;
       color: #dedede;
       line-height: 1.6;
       font-weight: 500;

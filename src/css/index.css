@@ -1,3 +1,19 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInCircleImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
   display: flex;
   flex-direction: row;
@@ -7,6 +23,9 @@ header {
   margin-left: 10vw;
   font-weight: 500;
   height: 100vh;
+}
+header > :not(.circle-image) {
+  animation: fadeIn 1.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) 0.2s both;
 }
 header h1 {
   text-align: left;
@@ -25,11 +44,11 @@ header .circle-image {
   height: 15rem;
   border: 3px solid #ff4c01;
   box-shadow: 0 0 0 2px #fd9e04;
-  animation: 1.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) 0.2s both avatar;
   border-radius: 50%;
   width: clamp(120px, 26vmin, 200px);
   height: clamp(120px, 26vmin, 200px);
   pointer-events: none;
+  animation: fadeInCircleImage 1s cubic-bezier(0.51, 0.07, 0.27, 0.85) 0s both;
 }
 @keyframes avatar {
   0% {
@@ -181,4 +200,6 @@ header ul a img {
 #info-box-container #info-box p {
   font-size: 1rem;
   line-height: 1.8;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
