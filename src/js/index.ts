@@ -1,74 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navbar");
 
-    if (navbar) {
-        const navHeight = `${navbar.offsetHeight}px`;
-        document.documentElement.style.setProperty('--nav-height', navHeight);
-        // Dynamically calculates the height of navbar
-    }
+if (navbar) {
+    document.documentElement.style.setProperty(
+        "--nav-height",
+        navbar.offsetHeight.toString()
+    );
+}
 
-    const $galleryScroll = $('.gallery-scroll');
-    const $galleryContent = $('.gallery-content');
-    const $leftArrow = $('#left-arrow');
-    const $rightArrow = $('#right-arrow');
+$(() => {
+    const $galleryScroll = $(".gallery-scroll");
+    const $leftArrow = $("#left-arrow");
+    const $rightArrow = $("#right-arrow");
 
-    if ($galleryScroll.length && $galleryContent.length && $leftArrow.length && $rightArrow.length) {
-        const scrollAmount = 640; // Adjust if needed, measured in pixels, so this is ~35.56rem.
-        // Why this specific? Images are set to height 20rem, and they are 16:9 aspect ratio, so this basically is the width of one image. I YAP TOO MUCH HELP
+    if ($galleryScroll.length && $leftArrow.length && $rightArrow.length) {
+        const scrollAmount = 640; // Adjust this value as needed
 
-        // Clone items for infinite scroll
-        const $items = $galleryContent.children().clone();
-        $galleryContent.append($items);
+        // Function to update arrow visibility
+        function updateArrowVisibility() {
+            const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
+            const scrollWidth = $galleryScroll[0].scrollWidth; // Total scrollable width
+            const clientWidth = $galleryScroll[0].clientWidth; // Visible width
 
-        let autoScrollInterval: number | null = null;
+            // Show/hide left arrow
+            currentScrollLeft <= 0
+                ? $leftArrow.addClass("hidden")
+                : $leftArrow.removeClass("hidden");
 
-        function updateGalleryPosition() {
-            const scrollLeft = $galleryScroll.scrollLeft() ?? 0; // use nullish coalescing operator ?? to avoid TypeScript screaming at me
-            const contentWidth = $galleryContent.width() ?? 0;
-            const halfContentWidth = contentWidth / 2;
-
-            if (scrollLeft >= halfContentWidth) {
-                $galleryScroll.scrollLeft(scrollLeft - halfContentWidth);
-            } else if (scrollLeft <= 0) {
-                $galleryScroll.scrollLeft(scrollLeft + halfContentWidth);
-            }
+            // Show/hide right arrow
+            currentScrollLeft + clientWidth >= scrollWidth
+                ? $rightArrow.addClass("hidden")
+                : $rightArrow.removeClass("hidden");
         }
 
-        function scrollLeft() {
-            $galleryScroll.animate({
-                scrollLeft: '-=' + scrollAmount
-            }, 400, updateGalleryPosition);
-        }
+        $leftArrow.on("click", () => {
+            const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0; // Use nullish coalescing operator
+            $galleryScroll.animate(
+                {
+                    scrollLeft: currentScrollLeft - scrollAmount,
+                },
+                400,
+                updateArrowVisibility
+            ); // Update visibility after animation
+        });
 
-        function scrollRight() {
-            $galleryScroll.animate({
-                scrollLeft: '+=' + scrollAmount
-            }, 400, updateGalleryPosition);
-        }
+        $rightArrow.on("click", () => {
+            const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0; // Use nullish coalescing operator
+            $galleryScroll.animate(
+                {
+                    scrollLeft: currentScrollLeft + scrollAmount,
+                },
+                400,
+                updateArrowVisibility
+            ); // Update visibility after animation
+        });
 
-        function stopAutoScroll() {
-            if (autoScrollInterval) {
-                clearInterval(autoScrollInterval);
-                autoScrollInterval = null;
-            }
-        }
-
-        $leftArrow.on('click', scrollLeft).on('click', stopAutoScroll);
-        $rightArrow.on('click', scrollRight).on('click', stopAutoScroll);
-
-        // Start automatic scrolling
-        function startAutoScroll() {
-            // Use an arrow function inside setInterval to maintain context
-            autoScrollInterval = setInterval(() => {
-                $galleryScroll.animate({
-                    scrollLeft: '+=' + scrollAmount
-                }, 400, updateGalleryPosition);
-            }, 5000);
-        }
-
-        startAutoScroll();
-
-        // Handle the "jump" when reaching the cloned items
-        $galleryScroll.on('scroll', updateGalleryPosition);
+        // Update visibility on scroll
+        $galleryScroll.on("scroll", updateArrowVisibility);
     }
 });
