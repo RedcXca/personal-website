@@ -18,22 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clone items for infinite scroll
         const $items = $galleryContent.children().clone();
-        let rightArrowClickCount: number = 0;
         $galleryContent.append($items);
 
-        // REMINDER TO SELF
-        // scrollLeftPos is the POSITION of the scroll, default function of .scrollLeft() on a scroll container gives the POSITION of the scroll
-        // While user-defined scrollLeft() is the ACTION OF SCROLLING TO THE LEFT AAAAAAAAAAAA
+        let autoScrollInterval: number | null = null;
 
         function updateGalleryPosition() {
-            const scrollLeftPos = $galleryScroll.scrollLeft() ?? 0; // use nullish coalescing operator ?? to avoid TypeScript screaming at me
-            const contentWidth = $galleryContent.width() ?? 0; // Basically defaults to 0 if null, what a weird operator
+            const scrollLeft = $galleryScroll.scrollLeft() ?? 0; // use nullish coalescing operator ?? to avoid TypeScript screaming at me
+            const contentWidth = $galleryContent.width() ?? 0;
             const halfContentWidth = contentWidth / 2;
 
-            if (scrollLeftPos >= halfContentWidth) {
-                $galleryScroll.scrollLeft(scrollLeftPos - halfContentWidth);
-            } else if (scrollLeftPos <= 0) {
-                $galleryScroll.scrollLeft(scrollLeftPos + halfContentWidth);
+            if (scrollLeft >= halfContentWidth) {
+                $galleryScroll.scrollLeft(scrollLeft - halfContentWidth);
+            } else if (scrollLeft <= 0) {
+                $galleryScroll.scrollLeft(scrollLeft + halfContentWidth);
             }
         }
 
@@ -59,8 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         $leftArrow.on('click', scrollLeft).on('click', stopAutoScroll);
         $rightArrow.on('click', scrollRight).on('click', stopAutoScroll);
 
-        // Automatic scrolling with 2-second delay, adjust delay if needed :3
-        let autoScrollInterval: number | null = setInterval(scrollRight, 2000);
+        // Start automatic scrolling
+        function startAutoScroll() {
+            // Use an arrow function inside setInterval to maintain context
+            autoScrollInterval = setInterval(() => {
+                $galleryScroll.animate({
+                    scrollLeft: '+=' + scrollAmount
+                }, 400, updateGalleryPosition);
+            }, 5000);
+        }
+
+        startAutoScroll();
 
         // Handle the "jump" when reaching the cloned items
         $galleryScroll.on('scroll', updateGalleryPosition);
