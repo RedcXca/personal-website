@@ -16,6 +16,7 @@ header h1 {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  align-items: center;
 }
 .osu-container h2 {
   padding-top: 1rem;
@@ -29,7 +30,6 @@ header h1 {
 }
 .osu-container img {
   max-width: 40vw;
-  height: auto;
   padding-left: 10vw;
 }
 .osu-container .osu-description {

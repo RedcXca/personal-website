@@ -17,6 +17,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  align-items: center; 
 
   h2 {
     padding-top: 1rem;
@@ -31,7 +32,6 @@ header {
 
   img {
     max-width: 40vw;
-    height: auto;
     padding-left: 10vw;
   }
 

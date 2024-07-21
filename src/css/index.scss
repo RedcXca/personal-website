@@ -48,7 +48,6 @@ header {
     height: 15rem;
     border: 3px solid #ff4c01;
     box-shadow: 0 0 0 2px #fd9e04;
-    border-radius: 50%;
     width: clamp(120px, 26vmin, 200px);
     height: clamp(120px, 26vmin, 200px);
     pointer-events: none;
@@ -60,7 +59,6 @@ header {
       transform: scale(0.8);
       opacity: 0;
     }
-
     100% {
       transform: scale(1);
       opacity: 1;
@@ -70,6 +68,8 @@ header {
   section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   ul {
@@ -78,11 +78,12 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
 
     a {
       width: 100%;
       text-align: center;
-      padding: 0.5rem 0.5rem; // Lined up end of commission info button with the header name
+      padding: 0.5rem 0.5rem;
 
       &#osu {
         padding-left: 0;
@@ -98,7 +99,6 @@ header {
         color: white;
         text-decoration: none;
         justify-content: center;
-        text-align: center;
         align-items: center;
         background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
         border-radius: 75px;
@@ -112,6 +112,53 @@ header {
       img {
         width: 4rem;
         height: 4rem;
+      }
+    }
+  }
+
+  // For mobile
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    margin-left: 0;
+    height: auto;
+    gap: 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .circle-image {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    section {
+      align-items: center;
+      text-align: center;
+    }
+
+    ul {
+      flex-direction: row;
+      scale: 0.8;
+      gap: 0.1rem;
+
+      a {
+        padding: 0.2rem;
+        width: auto;
+
+        &.commission-btn {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.2rem;
+          margin-top: -0.5rem;
+        }
+
+        img {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }
@@ -188,7 +235,7 @@ header {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
-  
+
     a {
       cursor: pointer;
       margin-left: 0.5rem;
@@ -203,14 +250,13 @@ header {
       border: none;
       text-decoration: none;
       padding: 0.5rem 0.5rem;
-  
+
       &:hover {
         color: #fd9e04;
         text-decoration: none;
       }
     }
   }
-  
 }
 
 .hidden {
