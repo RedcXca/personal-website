@@ -137,7 +137,7 @@ header ul a img {
 }
 #gallery-preview .arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
