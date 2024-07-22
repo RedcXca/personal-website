@@ -33,16 +33,20 @@ header {
   }
 
   img {
+    width: 50%;
     max-width: 40vw;
     padding-left: 10vw;
     border-radius: 30px;
     flex-shrink: 0;
+    object-fit: contain;
   }
 
   .osu-description {
+    width: 50%;
     padding: 0 6rem;
     flex-grow: 1;
     p {
+      text-align: center;
       font-size: 1.5rem;
       color: #dedede;
       line-height: 1.6;

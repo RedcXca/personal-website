@@ -31,16 +31,20 @@ header h1 {
   color: #dedede;
 }
 .osu-container img {
+  width: 50%;
   max-width: 40vw;
   padding-left: 10vw;
   border-radius: 30px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 .osu-container .osu-description {
+  width: 50%;
   padding: 0 6rem;
   flex-grow: 1;
 }
 .osu-container .osu-description p {
+  text-align: center;
   font-size: 1.5rem;
   color: #dedede;
   line-height: 1.6;
