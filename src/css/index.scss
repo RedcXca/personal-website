@@ -262,30 +262,3 @@ header {
 .hidden {
   display: none;
 }
-
-#info-box-container {
-  margin: 5rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-
-  #info-box {
-    width: 60vw;
-    background-color: #333333a9;
-    color: #ffffff;
-    border-radius: 3rem;
-    padding: 2rem;
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-  }
-}

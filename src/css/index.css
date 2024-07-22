@@ -226,28 +226,4 @@ header ul a img {
   display: none;
 }
 
-#info-box-container {
-  margin: 5rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-#info-box-container #info-box {
-  width: 60vw;
-  background-color: rgba(51, 51, 51, 0.662745098);
-  color: #ffffff;
-  border-radius: 3rem;
-  padding: 2rem;
-}
-#info-box-container #info-box h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-#info-box-container #info-box p {
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
 /*# sourceMappingURL=index.css.map */

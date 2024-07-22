@@ -13,6 +13,8 @@ header h1 {
 }
 
 .osu-container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -31,9 +33,12 @@ header h1 {
 .osu-container img {
   max-width: 40vw;
   padding-left: 10vw;
+  border-radius: 30px;
+  flex-shrink: 0;
 }
 .osu-container .osu-description {
   padding: 0 6rem;
+  flex-grow: 1;
 }
 .osu-container .osu-description p {
   font-size: 1.5rem;
