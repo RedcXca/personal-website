@@ -1,4 +1,4 @@
-# Hello this is my web page!
+# Welcome to my Webpage!
 ![Web Page](https://github.com/user-attachments/assets/18de3ab9-2823-42fd-8e70-296c787afb14)
 
 Everything is in their respective html/css pages. I tried my best to make it beginner friendly for learning purposes. 
