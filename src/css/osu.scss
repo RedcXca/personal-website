@@ -14,12 +14,12 @@ header {
 }
 
 .osu-container {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  align-items: center; 
   display: flex;
   flex-direction: row;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 100vw;
-  align-items: center; 
 
   h2 {
     padding-top: 1rem;
