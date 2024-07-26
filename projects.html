@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="src/images/%E6%97%A9%E5%AE%89.png" type="image/x-icon" />
+    <link rel="icon" href="src/images/icons/%E6%97%A9%E5%AE%89.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
     <title>RedcXca</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -44,19 +44,97 @@
     <header>
       <h1>Projects</h1>
     </header>
-    <section>
+    <section class="project-section">
       <div class="project-container">
         <div class="project-card">
-          <a href="https://github.com/RedcXca"
-            ><img src="src/images/miku/fufupoutine.webp" alt="Project Image" class="project-image" />
-            <div class="project-info">
-              <h2>My GitHub</h2>
-              <p>Check out my GitHub for all my projects, while I work on this site!</p>
+          <img src="src/images/miku/fufupoutine.webp" alt="Project Image" class="project-image" />
+          <div class="project-info">
+            <h2>Artificial Picasso</h2>
+            <p>
+              Constructed a robotic arm capable of drawing on paper with questionable precision. The project includes a
+              GUI for image processing + customization, which turns an image into lineart for the arm to convert to very
+              abstract art.
+            </p>
+            <div class="tags">
+              <span class="badge bg-secondary">Python</span>
+              <span class="badge bg-secondary">OpenCV</span>
+              <span class="badge bg-secondary">Robotics</span>
             </div>
-          </a>
+            <a href="https://github.com/w4zEl/ArtificialPicasso" class="project-link">
+              <img src="src/images/svg/github-black.svg" alt="GitHub Link" class="github-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/images/miku/fufupoutine.webp" alt="Project Image" class="project-image" />
+          <div class="project-info">
+            <h2>osu!catch</h2>
+            <p>
+              A heavily inspired rhythm game where players catch falling notes to the beat. Features include dynamic
+              hitboxes, a performance scoring system, and smooth graphics rendering. Furthermore, we also got a menu
+              artwork by <a href="https://twitter.com/shaoviie" target="_blank">SJAO</a>!
+            </p>
+            <div class="tags">
+              <span class="badge bg-secondary">Java</span>
+              <span class="badge bg-secondary">Java Swing</span>
+              <span class="badge bg-secondary">Game Development</span>
+            </div>
+            <a href="https://github.com/RedcXca/osu-catch" class="project-link">
+              <img src="src/images/svg/github-black.svg" alt="GitHub Link" class="github-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="src/images/miku/fufupoutine.webp" alt="Project Image" class="project-image" />
+          <div class="project-info">
+            <h2>Goose Goose Go</h2>
+            <p>
+              A web-based app that allows users to login and review restaurants. We have over 100000 items scraped from
+              UberEats, as well as secret discounts that only a distinguished Waterloo food connoisseur would know
+              about.
+            </p>
+            <div class="tags">
+              <span class="badge bg-secondary">Python + Flask</span>
+              <span class="badge bg-secondary">TypeScript + Svelte</span>
+              <span class="badge bg-secondary">MySQL</span>
+              <span class="badge bg-secondary">AWS RDS</span>
+            </div>
+            <a href="https://github.com/YJL3888/GooseGooseGo_CS348" class="project-link">
+              <img src="src/images/svg/github-black.svg" alt="GitHub Link" class="github-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/images/miku/fufupoutine.webp" alt="Project Image" class="project-image" />
+          <div class="project-info">
+            <h2>Personal Website</h2>
+            <p>
+              This website showcases my projects, skills, and other interests. I still don't fully know who the target
+              audience is, but whoever finds this website is probably a cool person from art/osu, or looking to employ
+              me (please).
+            </p>
+            <div class="tags">
+              <span class="badge bg-secondary">HTML</span>
+              <span class="badge bg-secondary">SCSS/CSS</span>
+              <span class="badge bg-secondary">JavaScript</span>
+            </div>
+            <a href="https://github.com/RedcXca/Personal-Website" class="project-link">
+              <img src="src/images/svg/github-black.svg" alt="Website Link" class="github-icon" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
+    <div class="info-box-container">
+      <div class="info-box">
+        <h2>TO BE CONTINUED</h2>
+        <p>I will build more stuff and put them here soon! I have a lot in my head that I want to build but currently 
+          either lack the time or the skill to do so. Stay tuned for more updates!
+        </p>
+      </div>
+    </div>
     <footer>
       <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
       <p class="large-footer-text"><b>ART & DESIGN © 2024 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>

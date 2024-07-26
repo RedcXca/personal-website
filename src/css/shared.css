@@ -130,24 +130,6 @@ nav .nav-link-wrapper ul li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Text Bar */
-.text-bar {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-content {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
 footer {
   background-color: #000;
   padding: 1rem;
@@ -183,7 +165,7 @@ footer .small-footer-text {
 }
 .info-box-container .info-box {
   width: 50vw;
-  background-color: rgba(51, 51, 51, 0.662745098);
+  background-color: rgba(34, 34, 34, 0.662745098);
   color: #ffffff;
   border-radius: 3rem;
   padding: 2rem;

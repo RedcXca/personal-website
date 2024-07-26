@@ -1,5 +1,5 @@
 header {
-  height: 20vh;
+  height: 40vh;
 
   h1 {
     font-size: 4rem;
@@ -13,13 +13,16 @@ header {
   }
 }
 
+.project-section {
+  padding: 2rem 0;
+}
+
 .project-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .project-card {
@@ -27,32 +30,71 @@ header {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  width: 25vw;
+  height: 60vh;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
   width: 100%;
+  height: 40%;
+  object-fit: cover;
+}
 
-  a {
-    text-decoration: none; // Made project links without styling
+.project-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  position: relative;
+
+  h2 {
+    margin-top: 0;
+    color: #333;
+    font-weight: 700;
   }
 
-  .project-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  p {
+    color: #371100;
+    line-height: 1.6;
+    font-weight: 500;
+    flex-grow: 1;
   }
 
-  .project-info {
-    padding: 1.5rem;
+  .tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
-    h2 {
-      margin-top: 0;
-      color: #333;
-      font-weight: 700;
+    .badge {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
+  }
+
+  .project-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
-    p {
-      color: #371100;
-      line-height: 1.6;
-      font-weight: 500;
+    .github-icon {
+      width: 36px;
+      height: 36px;
     }
   }
 }
