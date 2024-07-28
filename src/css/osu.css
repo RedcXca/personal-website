@@ -16,13 +16,12 @@ header h1 {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  width: 100vw;
+  margin: 2rem 0;
+  width: 100%;
 }
 .osu-container h2 {
   padding-top: 1rem;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   display: flex;
   text-align: center;
@@ -31,12 +30,9 @@ header h1 {
   color: #dedede;
 }
 .osu-container img {
-  width: 50%;
-  max-width: 40vw;
-  padding-left: 10vw;
-  border-radius: 30px;
-  flex-shrink: 0;
-  object-fit: contain;
+  width: 40vw;
+  margin-left: 10vw;
+  border-radius: 1.5rem;
 }
 .osu-container .osu-description {
   width: 50%;
@@ -50,5 +46,27 @@ header h1 {
   line-height: 1.6;
   font-weight: 500;
 }
-
-/*# sourceMappingURL=osu.css.map */
+@media (max-width: 768px) {
+  .osu-container .osu-description {
+    width: 50%;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .osu-container {
+    flex-direction: column;
+  }
+  .osu-container img {
+    width: 75vw;
+    margin: 0;
+  }
+  .osu-container .osu-description {
+    width: 80%;
+  }
+  .osu-container .osu-description h2 {
+    font-size: 2rem;
+  }
+  .osu-container .osu-description p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=osu.css.map */

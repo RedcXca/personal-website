@@ -11,9 +11,9 @@ $(() => {
     const $galleryScroll = $(".gallery-scroll");
     const $leftArrow = $("#left-arrow");
     const $rightArrow = $("#right-arrow");
+    const scrollAmount = 0.5 * window.innerWidth;
 
     if ($galleryScroll.length && $leftArrow.length && $rightArrow.length) {
-        const scrollAmount = 640; // Adjust this value as needed
 
         // Function to update arrow visibility
         function updateArrowVisibility() {

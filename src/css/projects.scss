@@ -15,86 +15,115 @@ header {
 
 .project-section {
   padding: 2rem 0;
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.project-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 25vw;
-  height: 60vh;
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-image {
-  width: 100%;
-  height: 40%;
-  object-fit: cover;
-}
-
-.project-info {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  position: relative;
-
-  h2 {
-    margin-top: 0;
-    color: #333;
-    font-weight: 700;
-  }
-
-  p {
-    color: #371100;
-    line-height: 1.6;
-    font-weight: 500;
-    flex-grow: 1;
-  }
-
-  .tags {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    .badge {
-      font-size: 0.8rem;
-      padding: 0.5rem;
-    }
-  }
-
-  .project-link {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: transparent;
-    padding: 0.5rem;
-    border-radius: 50%;
-    text-decoration: none;
+  .project-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 0.8rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 40vw;
+      height: auto;
+      margin: 2rem;
+      display: flex;
+      flex-direction: column;
+      .project-image {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+      }
+      .project-info {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        position: relative;
 
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+        h2 {
+          margin-top: 0;
+          color: #333;
+          font-weight: 700;
+        }
+
+        p {
+          color: #371100;
+          line-height: 1.6;
+          font-weight: 500;
+          flex-grow: 1;
+        }
+
+        .tags {
+          margin-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          .badge {
+            font-size: 0.8rem;
+            padding: 0.5rem;
+          }
+        }
+
+        .project-link {
+          border-radius: 0.8rem;
+          margin-top: -0.5rem;
+          padding-bottom: 0.5rem;
+          background-color: transparent;
+          text-decoration: none;
+          display: inline-flex;
+          gap: 2rem;
+
+          &:hover {
+            transform: scale(1);
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0.8rem;
+              width: 0;
+              height: 0.2rem;
+              background-color: #371100;
+              animation: underline 0.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) forwards;
+            }
+            @keyframes underline {
+              0% {
+                width: 0;
+              }
+
+              100% {
+                width: 100%;
+              }
+            }
+          }
+
+          .github-icon {
+            margin-top: -0.4rem;
+            width: 2rem;
+          }
+        }
+      }
     }
-
-    .github-icon {
-      width: 36px;
-      height: 36px;
+    @media (max-width: 720px) {
+      justify-content: center;
+      align-items: center;
+      .project-card {
+        width: 75vw;
+        .project-info {
+          .project-link {
+            animation: none; // Removes hover animation on mobile
+          }
+        }
+      }
+    }
+    @media (max-width: 350px) {
+      #goose {
+        gap: 0.2rem;
+      }
     }
   }
 }

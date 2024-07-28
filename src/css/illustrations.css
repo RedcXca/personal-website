@@ -33,6 +33,7 @@ section .illustrations-container {
   align-items: center;
   gap: 2rem;
   padding-bottom: 3rem;
+  flex-wrap: wrap;
 }
 section .illustrations-container img {
   width: 30vw;
@@ -87,4 +88,16 @@ section .button-container a:hover {
   margin: 0;
 }
 
-/*# sourceMappingURL=illustrations.css.map */
+@media (max-width: 768px) {
+  section .illustrations-container img {
+    width: 45vw;
+  }
+}
+@media (max-width: 468px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  section .illustrations-container {
+    gap: 0.7rem;
+  }
+}/*# sourceMappingURL=illustrations.css.map */

@@ -35,6 +35,7 @@ section {
     align-items: center;
     gap: 2rem;
     padding-bottom: 3rem;
+    flex-wrap: wrap;
     img {
       width: 30vw;
     }
@@ -44,7 +45,7 @@ section {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
-  
+
     a {
       cursor: pointer;
       margin-left: 0.5rem;
@@ -59,7 +60,7 @@ section {
       border: none;
       text-decoration: none;
       padding: 0.5rem 0.5rem;
-  
+
       &:hover {
         color: #fd9e04;
         text-decoration: none;
@@ -92,5 +93,26 @@ section {
 
   p {
     margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    .illustrations-container {
+      img {
+        width: 45vw;
+      }
+    }
+  }
+}
+@media (max-width: 468px) {
+  header {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  section {
+    .illustrations-container {
+      gap: 0.7rem;
+    }
   }
 }
