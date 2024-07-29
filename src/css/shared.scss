@@ -1,10 +1,6 @@
 /* Everything */
 
 @font-face {
-  font-family: "Dosis Bold";
-  src: url("../font/Dosis-VariableFont_wght.ttf") format("truetype");
-  font-weight: 500;
-  font-style: bold;
   font-family: "Dosis";
   src: url("../font/Dosis-VariableFont_wght.ttf") format("truetype");
   font-weight: 500;
@@ -27,7 +23,7 @@ html {
   font-weight: 400;
   font-size: 18px; // Defines 1rem
 
-  // IE Scrollbar styles
+  // IE Scrollbar styles (Not css standard but whatever)
   scrollbar-face-color: #646464;
   scrollbar-base-color: #646464;
   scrollbar-3dlight-color: #646464;
@@ -63,56 +59,67 @@ html {
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  min-width: 100vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between; // This keeps the logo on the left and the nav links on the right
   align-items: center;
-  padding: 1rem 2rem;
   background-color: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  .logo {
+  .navbar-brand {
+    padding-left: 1.5rem;
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    a {
-      text-decoration: none;
-      color: #fff;
+    text-decoration: none;
 
-      &:hover {
-        color: #fd9e04; // Optional: add hover effect
-      }
+    &:hover {
+      color: #fd9e04; // Optional: add hover effect
     }
   }
 
-  .nav-link-wrapper {
+  #navbarNav {
     ul {
-      padding-left: 0;
       list-style: none;
       display: flex;
       flex-direction: row;
       width: 100%;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
+      gap: 1.5rem;
+      padding-right: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: #dedede;
+        font-weight: bold;
+
+        &:hover {
+          color: #fd9e04;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    align-items: flex-start; // Align items to the left
+
+    .navbar-collapse {
+      width: 100%; // Ensure the collapse takes full width
+    }
+
+    .navbar-brand {
       padding: 0;
-      float: right;
-      gap: 1rem;
-      li {
-        margin-left: 1rem;
+    }
+
+    #navbarNav {
+      ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
 
         a {
-          text-decoration: none;
-          color: #dedede;
-          font-weight: bold;
-
-          &:hover {
-            color: #fd9e04;
-          }
+          padding: 0.5rem 0; // Add padding for better touch targets
         }
       }
     }
@@ -125,12 +132,11 @@ nav {
   z-index: -1;
   inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  background-image: url("../images/art/Touhou.jpg");
   background-size: cover;
   background-position: center;
-  background-image: url("../images/art/Touhou.jpg");
-  
+  background-repeat: no-repeat;
   overflow: hidden;
 
   &::before {
@@ -175,14 +181,14 @@ footer {
 }
 
 .info-box-container {
-  margin: 5rem;
+  margin: 4rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
 
   .info-box {
-    width: 50vw;
+    width: 60vw;
     background-color: #222222a9;
     color: #ffffff;
     border-radius: 3rem;

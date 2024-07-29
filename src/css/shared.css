@@ -58,53 +58,59 @@ html ::-webkit-resizer {
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  min-width: 100vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background-color: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-nav .logo {
+nav .navbar-brand {
+  padding-left: 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
-}
-nav .logo a {
   text-decoration: none;
-  color: #fff;
 }
-nav .logo a:hover {
+nav .navbar-brand:hover {
   color: #fd9e04;
 }
-nav .nav-link-wrapper ul {
-  padding-left: 0;
+nav #navbarNav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 0;
-  float: right;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
 }
-nav .nav-link-wrapper ul li {
-  margin-left: 1rem;
-}
-nav .nav-link-wrapper ul li a {
+nav #navbarNav ul a {
   text-decoration: none;
   color: #dedede;
   font-weight: bold;
 }
-nav .nav-link-wrapper ul li a:hover {
+nav #navbarNav ul a:hover {
   color: #fd9e04;
+}
+@media (max-width: 575px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .navbar-collapse {
+    width: 100%;
+  }
+  nav .navbar-brand {
+    padding: 0;
+  }
+  nav #navbarNav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+  nav #navbarNav ul a {
+    padding: 0.5rem 0;
+  }
 }
 
 /* hero */
@@ -113,11 +119,11 @@ nav .nav-link-wrapper ul li a:hover {
   z-index: -1;
   inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  background-image: url("../images/art/Touhou.jpg");
   background-size: cover;
   background-position: center;
-  background-image: url("../images/art/Touhou.jpg");
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 .hero::before {
@@ -157,14 +163,14 @@ footer .small-footer-text {
 }
 
 .info-box-container {
-  margin: 5rem;
+  margin: 4rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 .info-box-container .info-box {
-  width: 50vw;
+  width: 60vw;
   background-color: rgba(34, 34, 34, 0.662745098);
   color: #ffffff;
   border-radius: 3rem;
@@ -178,6 +184,4 @@ footer .small-footer-text {
 .info-box-container .info-box p {
   font-size: 1rem;
   line-height: 1.8;
-}
-
-/*# sourceMappingURL=shared.css.map */
+}/*# sourceMappingURL=shared.css.map */

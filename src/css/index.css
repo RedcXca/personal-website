@@ -94,6 +94,8 @@ header ul a.commission-btn {
   align-items: center;
   background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
   border-radius: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 header ul a.commission-btn:hover {
   background: white;
@@ -145,9 +147,8 @@ header ul a img {
 }
 
 #gallery-preview {
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
   background-color: #1f1f1f;
 }
 #gallery-preview .gallery-container {
@@ -157,7 +158,6 @@ header ul a img {
 #gallery-preview .gallery-scroll {
   display: flex;
   overflow-x: scroll;
-  gap: 1rem;
   padding-bottom: 1rem;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -221,9 +221,35 @@ header ul a img {
   color: #fd9e04;
   text-decoration: none;
 }
+#gallery-preview .arrow {
+  top: 32%;
+  font-size: 1rem;
+}
 
 .hidden {
   display: none;
 }
 
-/*# sourceMappingURL=index.css.map */
+@media (max-width: 575px) {
+  header ul {
+    scale: 0.65;
+  }
+  header ul a.commission-btn {
+    padding: 0.8rem;
+    margin-top: -0.2rem;
+  }
+  #gallery-preview {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  #gallery-preview .gallery-scroll .gallery-content img {
+    width: 45vw;
+    margin-right: 0.5rem;
+  }
+  .info-box-container {
+    margin: 2rem;
+  }
+  .info-box-container .info-box {
+    width: 80vw;
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=index.css.map */
