@@ -64,7 +64,8 @@ section .button-container a:hover {
 }
 
 .clients-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -79,13 +80,17 @@ section .button-container a:hover {
   text-align: center;
 }
 .client img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 .client p {
+  font-size: 1rem;
+  color: white;
   margin: 0;
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 @media (max-width: 768px) {
@@ -100,4 +105,6 @@ section .button-container a:hover {
   section .illustrations-container {
     gap: 0.7rem;
   }
-}/*# sourceMappingURL=illustrations.css.map */
+}
+
+/*# sourceMappingURL=illustrations.css.map */

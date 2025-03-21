@@ -1,100 +1,174 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/images/icons/redcxca.png" type="image/x-icon" />
+    <title>RedcXca</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./src/css/shared.css" rel="stylesheet" />
+    <link href="./src/css/illustrations.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="src/images/icons/%E6%97%A9%E5%AE%89.png" type="image/x-icon">
-  <title>RedcXca</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <link href="./src/css/shared.css" rel="stylesheet">
-  <link href="./src/css/illustrations.css" rel="stylesheet">
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
-  </style>
-</head>
-
-<body>
-  <div class="hero"></div>
-  <nav id="navbar" class="navbar navbar-expand-sm fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">RedcXca</a>
-      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav justify-content-end">
-          <li>
-            <a href="./projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="./illustrations.html">Illustrations</a>
-          </li>
-          <li>
-            <a href="./osu.html">osu!</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <header>
-    <h1>Illustrations</h1>
-  </header>
-  <section>
-    <h2>Full coloured illustrations</h2>
-    <div class="button-container">
-      <a href="https://docs.google.com/document/d/1CELGlKdLDq_-Usue3oQfcrawi-vKOXa3SOkzTHnqB5A/edit#heading=h.9lj1hkizyon2"
-        target="_blank">
-        Commission Info &nbsp; &rarr;
-      </a>
-    </div>
-    <div class="illustrations-container">
-      <img src="src/images/art/osu!%20Aerial%20Antics%20Fanart.webp" alt="osu! Aerial Antics Fanart">
-      <img src="src/images/art/Miku%2016th.jpg" alt="Miku 16th Art">
-      <img src="src/images/art/Wishful%20Wake.webp" alt="Wishful Wake Art">
-      <img src="src/images/art/osu!%20Winter%202023%20Fanart.webp" alt="osu! Winter 2023 Fanart">
-      <img src="src/images/art/Onsen%20Eris.webp" alt="Onsen Eris Art">
-      <img src="src/images/art/osu!%20Beatmap%20World%20Fanart.webp" alt="osu! Beatmap World Fanart">
-    </div>
-  </section>
-  <div class="info-box-container">
-    <div class="info-box">
-      <h2>Clients</h2>
-      <div class="clients-container">
-        <div class="client">
-          <a href="https://open.spotify.com/artist/3tFQdVbBDarUQ5WEGqmAww">
-            <img src="src/images/icons/redside.webp" alt="Redside">
-          </a>
-        </div>
-        <div class="client">
-          <a href="https://osu.ppy.sh/">
-            <img src="src/images/icons/osu.webp" alt="osu!">
-          </a>
-        </div>
-        <div class="client">
-          <a href="https://twitch.tv/xootynator">
-            <img src="src/images/icons/xootynator.webp" alt="Xootynator">
-          </a>
-        </div>
-        <div class="client">
-          <a href="https://www.linkedin.com/company/the-reckoner-of-mgci">
-            <img src="src/images/icons/reckoner.webp" alt="The Reckoner">
-          </a>
+  <body>
+    <div class="hero"></div>
+    <nav id="navbar" class="navbar navbar-expand-sm fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">RedcXca</a>
+        <button
+          class="navbar-toggler navbar-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-end">
+            <li>
+              <a href="./projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="./illustrations.html">Illustrations</a>
+            </li>
+            <li>
+              <a href="./osu.html">osu!</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <header>
+      <h1>Illustrations</h1>
+    </header>
+    <section>
+      <h2>Full coloured illustrations</h2>
+      <div class="button-container">
+        <a
+          href="https://docs.google.com/document/d/1CELGlKdLDq_-Usue3oQfcrawi-vKOXa3SOkzTHnqB5A/edit#heading=h.9lj1hkizyon2"
+          target="_blank"
+        >
+          Commission Info &nbsp; &rarr;
+        </a>
+      </div>
+      <div class="illustrations-container">
+        <img src="src/images/art/Clinozoisite.webp" alt="Clinozoisite"/>
+        <img src="src/images/art/Cold%20Brew.webp" alt="Cold Brew"/>
+        <img src="src/images/art/CWC%20Collab%202024.webp" alt="CWC Collab 2024"/>
+        <img src="src/images/art/Golden%20Tears%20Text.webp" alt="Golden Tears"/>
+        <img src="src/images/art/GTS%20Final%20Road%20Megamix.webp" alt="GTS Final Road Megamix"/>
+        <img src="src/images/art/Mainquest%20Text.webp" alt="Mainquest" >
+        <img src="src/images/art/Miku%2016th.webp" alt="Miku 16th"/>
+        <img src="src/images/art/Sakura006%20Text%20Censored.webp" alt="Sakura006"/>
+        <img src="src/images/art/Nazuna%20Mikeneko.webp" alt="Nazuna Mikeneko"/>
+        <img src="src/images/art/Onsen%20Eris.webp" alt="Onsen Eris"/>
+        <img src="src/images/art/osu!%20Aerial%20Antics%20Fanart.webp" alt="osu! Aerial Antics Fanart"/>
+        <img src="src/images/art/osu!%20Beach%20Episode%20Fanart%20Censored.webp" alt="osu! Beach Episode Fanart"/>
+        <img src="src/images/art/osu!%20Winter%202023%20Fanart.webp" alt="osu! Winter 2023 Fanart"/>
+        <img src="src/images/art/osu!%20Halloween%202022%20Fanart.webp" alt="osu! Halloween 2022 Fanart"/>
+        <img src="src/images/art/Wishful%20Wake.webp" alt="Wishful Wake"/>
+      </div>
+    </section>
+    <div class="info-box-container">
+      <div class="info-box">
+        <h2>Clients</h2>
+        <div class="clients-container">
+          <div class="client">
+            <a href="https://open.spotify.com/artist/3tFQdVbBDarUQ5WEGqmAww">
+              <img src="src/images/icons/redside.webp" alt="Redside" />
+              <p>Redside</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://osu.ppy.sh/">
+              <img src="src/images/icons/osu.webp" alt="osu!" />
+              <p>osu!</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://twitch.tv/xootynator">
+              <img src="src/images/icons/xootynator.webp" alt="Xootynator" />
+              <p>Xootynator</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://www.linkedin.com/company/the-reckoner-of-mgci">
+              <img src="src/images/icons/reckoner.webp" alt="The Reckoner" />
+              <p>The Reckoner</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://soundcloud.com/kanemiko">
+              <img src="src/images/icons/kanemiko.webp" alt="Kanemiko" />
+              <p>Kanemiko</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://www.youtube.com/channel/UCzd3joivbKsRYN609acxATw">
+              <img src="src/images/icons/aoi.webp" alt="Aoi" />
+              <p>Aoi</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://www.youtube.com/@Cametek.CamelliaOfficial">
+              <img src="src/images/icons/camellia.webp" alt="Camellia" />
+              <p>Camellia</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://www.youtube.com/@EiliYT">
+              <img src="src/images/icons/eili.webp" alt="Eili" />
+              <p>Eili</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://www.youtube.com/@Krimek">
+              <img src="src/images/icons/krimek.webp" alt="Krimek" />
+              <p>Krimek</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://soundcloud.com/silis">
+              <img src="src/images/icons/silis.webp" alt="SiLiS" />
+              <p>SiLiS</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://soundcloud.com/takehirotei">
+              <img src="src/images/icons/takehirotei.webp" alt="Takehirotei" />
+              <p>Takehirotei</p>
+            </a>
+          </div>
+          <div class="client">
+            <a href="https://redcx.ca">
+              <img src="src/images/icons/avatar.png" />
+              <p>...could be you!</p>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <footer>
-    <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
-    <p class="large-footer-text"><b>ART & DESIGN © 2024 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
-    <p class="small-footer-text">And some more small text probably no one is going to see.</p>
-  </footer>
-</body>
-
+    <footer>
+      <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
+      <p class="large-footer-text"><b>ART & DESIGN © 2025 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
+      <p class="small-footer-text">And some more small text probably no one is going to see.</p>
+    </footer>
+  </body>
 </html>

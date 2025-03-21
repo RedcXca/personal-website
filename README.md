@@ -16,3 +16,6 @@ Feel free to reach out if you have any questions, suggestions, or just want to c
 - **LinkedIn**: [maxzylu](https://www.linkedin.com/in/maxzylu)
 - **Twitter**: [redcxca](https://twitter.com/redcxca)
 - **osu!**: [redcxca](https://osu.ppy.sh/users/redcxca) <- Let's mutual!
+
+## For Self
+sass --watch src/css/:src/css/

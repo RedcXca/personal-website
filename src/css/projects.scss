@@ -77,7 +77,6 @@ header {
           text-decoration: none;
           display: inline-flex;
           gap: 2rem;
-
           &:hover {
             transform: scale(1);
             &::after {
@@ -94,13 +93,11 @@ header {
               0% {
                 width: 0;
               }
-
               100% {
                 width: 100%;
               }
             }
           }
-
           .github-icon {
             margin-top: -0.4rem;
             width: 2rem;
