@@ -14,7 +14,7 @@ header {
 }
 
 .project-section {
-  padding: 2rem 0;
+  padding: 2rem;
   .project-container {
     display: flex;
     align-items: center;
@@ -105,22 +105,30 @@ header {
         }
       }
     }
-    @media (max-width: 720px) {
+  }
+}
+
+@media (max-width: 1100px) {
+  .project-section {
+    padding: 0;
+    .project-container {
       justify-content: center;
       align-items: center;
       .project-card {
-        width: 75vw;
+        width: 80vw;
         .project-info {
           .project-link {
-            animation: none; // Removes hover animation on mobile
+            animation: none; // removes hover animation on mobile
           }
+        }
+        .project-image {
+          height: 30vh;
         }
       }
     }
-    @media (max-width: 350px) {
-      #goose {
-        gap: 0.2rem;
-      }
-    }
   }
+}
+
+@media (max-width: 575px) {
+
 }

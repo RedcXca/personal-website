@@ -87,27 +87,6 @@ nav #navbarNav ul a {
 nav #navbarNav ul a:hover {
   color: #fd9e04;
 }
-@media (max-width: 575px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav .navbar-collapse {
-    width: 100%;
-  }
-  nav .navbar-brand {
-    padding: 0;
-  }
-  nav #navbarNav ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-    padding: 0.75rem 0;
-  }
-  nav #navbarNav ul a {
-    padding: 0.5rem 0;
-  }
-}
 
 /* hero */
 .hero {
@@ -180,6 +159,42 @@ footer .small-footer-text {
 .info-box-container .info-box p {
   font-size: 1.5rem;
   line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .info-box-container .info-box {
+    width: 70vw !important;
+  }
+  .info-box-container .info-box h2, .info-box-container .info-box p {
+    font-size: 1.2rem !important;
+  }
+}
+@media (max-width: 575px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .navbar-collapse {
+    width: 100%;
+  }
+  nav .navbar-brand {
+    padding: 0;
+  }
+  nav #navbarNav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+  nav #navbarNav ul a {
+    padding: 0.5rem 0;
+  }
+  .info-box-container .info-box {
+    width: 90vw !important;
+  }
+  .info-box-container .info-box h2, .info-box-container .info-box p {
+    font-size: 0.8rem !important;
+  }
 }
 
 /*# sourceMappingURL=shared.css.map */

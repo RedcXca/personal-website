@@ -59,12 +59,6 @@ header .circle-image {
     opacity: 1;
   }
 }
-header #gallery-preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 header ul {
   padding-left: 0;
   list-style: none;
@@ -104,46 +98,6 @@ header ul a.commission-btn:hover {
 header ul a img {
   width: 4rem;
   height: 4rem;
-}
-@media (max-width: 1100px) {
-  header {
-    flex-direction: column;
-    padding-top: 15vh;
-    padding-bottom: 5vh;
-    margin-left: 0;
-    height: auto;
-    gap: 1rem;
-  }
-  header h1 {
-    font-size: 2.5rem;
-  }
-  header .circle-image {
-    width: 6rem;
-    height: 6rem;
-  }
-  header #gallery-preview {
-    align-items: center;
-    text-align: center;
-  }
-  header ul {
-    flex-direction: row;
-    scale: 0.8;
-    gap: 0.1rem;
-  }
-  header ul a {
-    padding: 0.2rem;
-    width: auto;
-  }
-  header ul a.commission-btn {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.2rem;
-    margin-top: -0.5rem;
-  }
-  header ul a img {
-    width: 3rem;
-    height: 3rem;
-  }
 }
 
 .gallery-container {
@@ -228,29 +182,6 @@ header ul a img {
   display: none;
 }
 
-@media (max-width: 575px) {
-  header ul {
-    scale: 0.65;
-  }
-  header ul a.commission-btn {
-    padding: 0.8rem;
-    margin-top: -0.2rem;
-  }
-  .gallery-container {
-    padding: 1.5rem 1.5rem 0 1.5rem;
-  }
-  .gallery-container .gallery-scroll .gallery-content img {
-    width: 45vw;
-    margin-right: 0.5rem;
-  }
-  .info-box-container {
-    margin: 2rem;
-  }
-  .info-box-container .info-box {
-    width: 80vw;
-    padding: 1rem;
-  }
-}
 .title-info-container {
   margin: 4rem;
   display: flex;
@@ -296,6 +227,99 @@ header ul a img {
 .title-info-container .title-info .content .text p {
   font-size: 1.5rem;
   line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  header {
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    margin-left: 0;
+    height: auto;
+    gap: 1rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header .circle-image {
+    width: 6rem;
+    height: 6rem;
+  }
+  header #gallery-preview {
+    align-items: center;
+    text-align: center;
+  }
+  header ul {
+    flex-direction: row;
+    scale: 0.8;
+    gap: 0.1rem;
+  }
+  header ul a {
+    padding: 0.2rem;
+    width: auto;
+  }
+  header ul a.commission-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+  header ul a img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .title-info-container .title-info {
+    width: 70vw;
+  }
+  .title-info-container .content .image {
+    width: 45%;
+  }
+  .title-info-container .content .image img {
+    width: 90%;
+    border-radius: 4rem;
+  }
+  .title-info-container .content .text {
+    width: 55%;
+  }
+  .title-info-container .content .text p {
+    font-size: 1.2rem !important;
+  }
+}
+@media (max-width: 575px) {
+  header ul {
+    scale: 0.65;
+  }
+  header ul a.commission-btn {
+    padding: 0.8rem;
+    margin-top: -0.2rem;
+  }
+  .gallery-container {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  .gallery-container .gallery-scroll .gallery-content img {
+    width: 45vw;
+    margin-right: 0.5rem;
+  }
+  .info-box-container {
+    margin: 2rem;
+  }
+  .info-box-container .info-box {
+    width: 80vw;
+    padding: 1rem;
+  }
+  .title-info-container .title-info {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+  .title-info-container .content .image {
+    display: none;
+  }
+  .title-info-container .content .text {
+    width: 100%;
+  }
+  .title-info-container .content .text p {
+    font-size: 0.8rem !important;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
