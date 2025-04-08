@@ -50,8 +50,7 @@ $(function () {
   window.addEventListener("scroll", function () {
     var parallax = document.querySelector(".hero");
     if (parallax) {
-      var scrollPosition = window.pageYOffset;
-      parallax.style.backgroundPositionY = scrollPosition * 0.05 + "px";
+      parallax.style.backgroundPositionY = (window.pageYOffset / this.document.body.scrollHeight) * 70 + "px";
     }
   });
 });
