@@ -1,56 +1,59 @@
-var navbar = document.getElementById("navbar");
+
+const navbar = document.getElementById("navbar");
 if (navbar) {
   document.documentElement.style.setProperty("--nav-height", navbar.offsetHeight.toString());
 }
+
 $(function () {
-  var $galleryScroll = $(".gallery-scroll");
-  var $leftArrow = $("#left-arrow");
-  var $rightArrow = $("#right-arrow");
-  var scrollAmount = 0.5 * window.innerWidth;
+  const $galleryScroll = $(".gallery-scroll");
+  const $leftArrow = $("#left-arrow");
+  const $rightArrow = $("#right-arrow");
+  const scrollAmount = 0.5 * window.innerWidth;
+  const ANIMATION_DURATION = 400; // ms, duration for gallery scroll animation
+
   if ($galleryScroll.length && $leftArrow.length && $rightArrow.length) {
-    // Function to update arrow visibility
     function updateArrowVisibility() {
-      var _a;
-      var currentScrollLeft = (_a = $galleryScroll.scrollLeft()) !== null && _a !== void 0 ? _a : 0;
-      var scrollWidth = $galleryScroll[0].scrollWidth; // Total scrollable width
-      var clientWidth = $galleryScroll[0].clientWidth; // Visible width
-      // Show/hide left arrow
-      currentScrollLeft <= 0 ? $leftArrow.addClass("hidden") : $leftArrow.removeClass("hidden");
-      // Show/hide right arrow
-      currentScrollLeft + clientWidth >= scrollWidth
-        ? $rightArrow.addClass("hidden")
-        : $rightArrow.removeClass("hidden");
+      const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
+      const scrollWidth = $galleryScroll[0].scrollWidth;
+      const clientWidth = $galleryScroll[0].clientWidth;
+      if (currentScrollLeft <= 0) {
+        $leftArrow.addClass("hidden");
+      } else {
+        $leftArrow.removeClass("hidden");
+      }
+      if (currentScrollLeft + clientWidth >= scrollWidth) {
+        $rightArrow.addClass("hidden");
+      } else {
+        $rightArrow.removeClass("hidden");
+      }
     }
+
     $leftArrow.on("click", function () {
-      var _a;
-      var currentScrollLeft = (_a = $galleryScroll.scrollLeft()) !== null && _a !== void 0 ? _a : 0; // Use nullish coalescing operator
+      const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
       $galleryScroll.animate(
-        {
-          scrollLeft: currentScrollLeft - scrollAmount,
-        },
-        400,
+        { scrollLeft: currentScrollLeft - scrollAmount },
+        ANIMATION_DURATION,
         updateArrowVisibility
-      ); // Update visibility after animation
+      );
     });
+
     $rightArrow.on("click", function () {
-      var _a;
-      var currentScrollLeft = (_a = $galleryScroll.scrollLeft()) !== null && _a !== void 0 ? _a : 0; // Use nullish coalescing operator
+      const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
       $galleryScroll.animate(
-        {
-          scrollLeft: currentScrollLeft + scrollAmount,
-        },
-        400,
+        { scrollLeft: currentScrollLeft + scrollAmount },
+        ANIMATION_DURATION,
         updateArrowVisibility
-      ); // Update visibility after animation
+      );
     });
-    // Update visibility on scroll
+
     $galleryScroll.on("scroll", updateArrowVisibility);
   }
+
   // Parallax scrolling effect for the .hero section
   window.addEventListener("scroll", function () {
-    var parallax = document.querySelector(".hero");
+    const parallax = document.querySelector(".hero");
     if (parallax) {
-      parallax.style.backgroundPositionY = (window.pageYOffset / this.document.body.scrollHeight) * 70 + "px";
+      parallax.style.backgroundPositionY = (window.pageYOffset / document.body.scrollHeight) * 70 + "px";
     }
   });
 });
