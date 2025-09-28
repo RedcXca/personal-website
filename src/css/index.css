@@ -102,52 +102,65 @@ header ul a img {
 
 .gallery-container {
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 0 0 0;
   background-color: #1f1f1f;
   position: relative;
-  overflow: hidden;
-}
-.gallery-container .gallery-scroll {
   display: flex;
-  overflow-x: scroll;
-  padding-bottom: 1rem;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  flex-direction: column;
+  align-items: center;
 }
-.gallery-container .gallery-scroll::-webkit-scrollbar {
-  display: none;
+.gallery-container .arrow-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
-.gallery-container .gallery-scroll .gallery-content {
-  display: inline-block;
-  white-space: nowrap;
-}
-.gallery-container .gallery-scroll .gallery-content img {
-  display: inline-block;
-  width: 30vw;
-  height: auto;
-  margin-right: 1rem;
-}
-.gallery-container .arrow {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+.gallery-container .arrow-container .arrow {
+  position: relative;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   border: none;
   font-size: 2rem;
-  padding: 0.5rem;
+  padding: 1 rem;
   cursor: pointer;
   z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  min-width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.gallery-container .arrow#left-arrow {
-  left: 0;
-}
-.gallery-container .arrow#right-arrow {
-  right: 0;
-}
-.gallery-container .arrow:hover {
+.gallery-container .arrow-container .arrow:hover {
   background: rgba(0, 0, 0, 0.7);
+}
+.gallery-container .arrow-container .arrow.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.gallery-container .arrow-container .gallery-scroll {
+  display: flex;
+  overflow-x: scroll;
+  padding: 0 1rem 0 1rem;
+  scroll-behavior: smooth;
+  flex: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.gallery-container .arrow-container .gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+.gallery-container .arrow-container .gallery-scroll .gallery-content {
+  display: inline-block;
+  white-space: nowrap;
+}
+.gallery-container .arrow-container .gallery-scroll .gallery-content img {
+  display: inline-block;
+  width: 30vw;
+  height: auto;
+  margin-right: 1rem;
 }
 .gallery-container .button-container {
   display: flex;
@@ -172,10 +185,6 @@ header ul a img {
 .gallery-container .button-container a:hover {
   color: #fd9e04;
   text-decoration: none;
-}
-.gallery-container .arrow {
-  top: 32%;
-  font-size: 1rem;
 }
 
 .hidden {
