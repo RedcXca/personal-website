@@ -120,15 +120,15 @@ header ul a img {
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   border: none;
-  font-size: 2rem;
-  padding: 1 rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   cursor: pointer;
   z-index: 20;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  min-width: 4rem;
-  height: 4rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,6 +304,12 @@ header ul a img {
   }
   .gallery-container {
     padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  .gallery-container .arrow-container .arrow {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    min-width: 2rem;
+    height: 2rem;
   }
   .gallery-container .gallery-scroll .gallery-content img {
     width: 45vw;
