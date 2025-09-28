@@ -113,63 +113,73 @@ header {
 
 .gallery-container {
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 0 0 0;
   background-color: #1f1f1f;
   position: relative;
-  overflow: hidden; // Hide overflow to keep arrows outside the scrollable area
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .gallery-scroll {
+  .arrow-container {
     display: flex;
-    overflow-x: scroll; // Allow horizontal scrolling
-    padding-bottom: 1rem;
-    scroll-behavior: smooth;
+    align-items: center;
+    width: 100%;
+    position: relative;
 
-    // Hide scrollbar for IE, Edge and Firefox
-    -ms-overflow-style: none; // IE and Edge
-    scrollbar-width: none; // Firefox
+    .arrow {
+      position: relative;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      padding: 1rem;
+      cursor: pointer;
+      z-index: 20;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      min-width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
 
-    .gallery-content {
-      display: inline-block;
-      white-space: nowrap;
-
-      img {
-        display: inline-block;
-        width: 30vw;
-        height: auto;
-        margin-right: 1rem;
-        // object-fit: cover;
-        // flex-shrink: 0; // Prevent images from shrinking}
-        // These lines not needed after scroll update :3
+      &.visible {
+        opacity: 1;
+        pointer-events: auto;
       }
     }
-  }
 
-  .arrow {
-    position: absolute; // Position arrows absolutely
-    top: 40%; // Center vertically
-    transform: translateY(-50%); // Adjust for perfect centering
-    background: rgba(0, 0, 0, 0.3); // Semi-transparent background
-    color: #fff;
-    border: none;
-    font-size: 2rem; // Adjust size as needed
-    padding: 0.5rem; // Add padding for clickable area
-    cursor: pointer;
-    z-index: 20; // Ensure arrows are above the images and background
+    .gallery-scroll {
+      display: flex;
+      overflow-x: scroll;
+      padding: 0 1rem 0 1rem;
+      scroll-behavior: smooth;
+      flex: 1;
 
-    &#left-arrow {
-      left: 0; // Position outside the left edge
-    }
+      // Hide scrollbar for IE, Edge and Firefox
+      -ms-overflow-style: none; // IE and Edge
+      scrollbar-width: none; // Firefox
 
-    &#right-arrow {
-      right: 0; // Position outside the right edge
-    }
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.7); // Darken on hover
+      .gallery-content {
+        display: inline-block;
+        white-space: nowrap;
+
+        img {
+          display: inline-block;
+          width: 30vw;
+          height: auto;
+          margin-right: 1rem;
+        }
+      }
     }
   }
 
@@ -198,11 +208,6 @@ header {
         text-decoration: none;
       }
     }
-  }
-
-  .arrow {
-    top: 32%;
-    font-size: 1rem;
   }
 }
 

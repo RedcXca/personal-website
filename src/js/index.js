@@ -17,14 +17,14 @@ $(function () {
       const scrollWidth = $galleryScroll[0].scrollWidth;
       const clientWidth = $galleryScroll[0].clientWidth;
       if (currentScrollLeft <= 0) {
-        $leftArrow.addClass("hidden");
+        $leftArrow.removeClass("visible");
       } else {
-        $leftArrow.removeClass("hidden");
+        $leftArrow.addClass("visible");
       }
       if (currentScrollLeft + clientWidth >= scrollWidth) {
-        $rightArrow.addClass("hidden");
+        $rightArrow.removeClass("visible");
       } else {
-        $rightArrow.removeClass("hidden");
+        $rightArrow.addClass("visible");
       }
     }
 
@@ -47,6 +47,9 @@ $(function () {
     });
 
     $galleryScroll.on("scroll", updateArrowVisibility);
+    
+    // Initialize arrow visibility on page load
+    updateArrowVisibility();
   }
 
   // Parallax scrolling effect for the .hero section
