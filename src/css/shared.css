@@ -161,6 +161,28 @@ footer .small-footer-text {
   line-height: 1.8;
 }
 
+#music-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+#music-widget button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#music-widget button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
 @media (max-width: 1100px) {
   .info-box-container .info-box {
     width: 70vw !important;
@@ -196,5 +218,3 @@ footer .small-footer-text {
     font-size: 0.8rem !important;
   }
 }
-
-/*# sourceMappingURL=shared.css.map */
