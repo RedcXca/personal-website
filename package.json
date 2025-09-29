@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "sass src/css/:src/css/ --no-source-map"
+  },
   "devDependencies": {
     "@types/jquery": "^3.5.30"
   }
