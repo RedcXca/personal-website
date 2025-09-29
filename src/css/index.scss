@@ -114,10 +114,9 @@
   padding: 2rem 0 0 0;
 
   .gallery-scroll {
-    display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scroll-behavior: auto;
     padding: 0 1rem 0 1rem;
-    scroll-behavior: smooth;
     width: 100%;
 
     // Hide scrollbar for IE, Edge and Firefox
@@ -131,6 +130,7 @@
     .gallery-content {
       display: inline-block;
       white-space: nowrap;
+      animation: scrollGallery 150s linear infinite;
 
       img {
         display: inline-block;
@@ -140,7 +140,18 @@
       }
     }
   }
+}
 
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .work-experience-section {

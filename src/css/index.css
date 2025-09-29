@@ -103,10 +103,9 @@
   padding: 2rem 0 0 0;
 }
 .gallery-container .gallery-scroll {
-  display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+  scroll-behavior: auto;
   padding: 0 1rem 0 1rem;
-  scroll-behavior: smooth;
   width: 100%;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -117,6 +116,7 @@
 .gallery-container .gallery-scroll .gallery-content {
   display: inline-block;
   white-space: nowrap;
+  animation: scrollGallery 150s linear infinite;
 }
 .gallery-container .gallery-scroll .gallery-content img {
   display: inline-block;
@@ -125,6 +125,17 @@
   margin-right: 1rem;
 }
 
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .work-experience-section .work-experience-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
