@@ -14,7 +14,7 @@
     opacity: 1;
   }
 }
-header {
+.hero-section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,10 +24,10 @@ header {
   font-weight: 500;
   height: 100vh;
 }
-header > :not(.circle-image) {
+.hero-section > :not(.circle-image) {
   animation: fadeIn 1.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) 0.2s both;
 }
-header h1 {
+.hero-section h1 {
   text-align: left;
   padding-left: 0;
   font-weight: 800;
@@ -38,12 +38,11 @@ header h1 {
   opacity: 0.85;
   mix-blend-mode: exclusion;
 }
-header .circle-image {
+.hero-section .circle-image {
   border-radius: 50%;
   width: 15rem;
   height: 15rem;
-  border: 3px solid #ff4c01;
-  box-shadow: 0 0 0 2px #fd9e04;
+  border: 5px solid #ff6b1a;
   width: clamp(120px, 26vmin, 200px);
   height: clamp(120px, 26vmin, 200px);
   pointer-events: none;
@@ -59,7 +58,7 @@ header .circle-image {
     opacity: 1;
   }
 }
-header ul {
+.hero-section ul {
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -67,15 +66,15 @@ header ul {
   width: 100%;
   justify-content: center;
 }
-header ul a {
+.hero-section ul a {
   width: 100%;
   text-align: center;
   padding: 0.5rem 0.5rem;
 }
-header ul a#osu {
+.hero-section ul a#osu {
   padding-left: 0;
 }
-header ul a.commission-btn {
+.hero-section ul a.commission-btn {
   cursor: pointer;
   padding: 16px 1.95rem;
   margin-left: 0.5rem;
@@ -91,23 +90,17 @@ header ul a.commission-btn {
   white-space: nowrap;
   flex-shrink: 0;
 }
-header ul a.commission-btn:hover {
+.hero-section ul a.commission-btn:hover {
   background: white;
   color: black;
 }
-header ul a img {
+.hero-section ul a img {
   width: 4rem;
   height: 4rem;
 }
 
 .gallery-container {
-  width: 100%;
   padding: 2rem 0 0 0;
-  background-color: #1f1f1f;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .gallery-container .arrow-container {
   display: flex;
@@ -162,30 +155,6 @@ header ul a img {
   height: auto;
   margin-right: 1rem;
 }
-.gallery-container .button-container {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1rem;
-}
-.gallery-container .button-container a {
-  cursor: pointer;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: inline-flex;
-  font-size: 1rem;
-  color: white;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  background: none;
-  border: none;
-  text-decoration: none;
-  padding: 0.5rem 0.5rem;
-}
-.gallery-container .button-container a:hover {
-  color: #fd9e04;
-  text-decoration: none;
-}
 
 .hidden {
   display: none;
@@ -239,7 +208,7 @@ header ul a img {
 }
 
 @media (max-width: 1100px) {
-  header {
+  .hero-section {
     flex-direction: column;
     padding-top: 15vh;
     padding-bottom: 5vh;
@@ -247,33 +216,33 @@ header ul a img {
     height: auto;
     gap: 1rem;
   }
-  header h1 {
+  .hero-section h1 {
     font-size: 2.5rem;
   }
-  header .circle-image {
+  .hero-section .circle-image {
     width: 6rem;
     height: 6rem;
   }
-  header #gallery-preview {
+  .hero-section #gallery-preview {
     align-items: center;
     text-align: center;
   }
-  header ul {
+  .hero-section ul {
     flex-direction: row;
     scale: 0.8;
     gap: 0.1rem;
   }
-  header ul a {
+  .hero-section ul a {
     padding: 0.2rem;
     width: auto;
   }
-  header ul a.commission-btn {
+  .hero-section ul a.commission-btn {
     width: 100%;
     padding: 1rem;
     font-size: 1.2rem;
     margin-top: -0.5rem;
   }
-  header ul a img {
+  .hero-section ul a img {
     width: 3rem;
     height: 3rem;
   }
@@ -295,10 +264,10 @@ header ul a img {
   }
 }
 @media (max-width: 575px) {
-  header ul {
+  .hero-section ul {
     scale: 0.65;
   }
-  header ul a.commission-btn {
+  .hero-section ul a.commission-btn {
     padding: 0.8rem;
     margin-top: -0.2rem;
   }
@@ -314,13 +283,6 @@ header ul a img {
   .gallery-container .gallery-scroll .gallery-content img {
     width: 45vw;
     margin-right: 0.5rem;
-  }
-  .info-box-container {
-    margin: 2rem;
-  }
-  .info-box-container .info-box {
-    width: 80vw;
-    padding: 1rem;
   }
   .title-info-container .title-info {
     width: 90vw;

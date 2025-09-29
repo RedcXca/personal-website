@@ -16,7 +16,7 @@
   }
 }
 
-header {
+.hero-section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -46,8 +46,7 @@ header {
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
-    border: 3px solid #ff4c01;
-    box-shadow: 0 0 0 2px #fd9e04;
+    border: 5px solid #ff6b1a;
     width: clamp(120px, 26vmin, 200px);
     height: clamp(120px, 26vmin, 200px);
     pointer-events: none;
@@ -112,13 +111,7 @@ header {
 }
 
 .gallery-container {
-  width: 100%;
   padding: 2rem 0 0 0;
-  background-color: #1f1f1f;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .arrow-container {
     display: flex;
@@ -183,32 +176,6 @@ header {
     }
   }
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
-
-    a {
-      cursor: pointer;
-      margin-left: 0.5rem;
-      margin-bottom: 0.5rem;
-      display: inline-flex;
-      font-size: 1rem;
-      color: white;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      background: none;
-      border: none;
-      text-decoration: none;
-      padding: 0.5rem 0.5rem;
-
-      &:hover {
-        color: #fd9e04;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 .hidden {
@@ -266,7 +233,7 @@ header {
   }
 }
 @media (max-width: 1100px) {
-  header {
+  .hero-section {
     flex-direction: column;
     padding-top: 15vh;
     padding-bottom: 5vh;
@@ -327,7 +294,7 @@ header {
 }
 
 @media (max-width: 575px) {
-  header {
+  .hero-section {
     ul {
       scale: 0.65;
       a.commission-btn {
@@ -353,13 +320,6 @@ header {
           margin-right: 0.5rem;
         }
       }
-    }
-  }
-  .info-box-container {
-    margin: 2rem;
-    .info-box {
-      width: 80vw;
-      padding: 1rem;
     }
   }
   .title-info-container {

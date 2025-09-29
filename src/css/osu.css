@@ -1,17 +1,3 @@
-header {
-  height: 40vh;
-}
-header h1 {
-  font-size: 4rem;
-  padding-top: 20vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: #dedede;
-  font-weight: 900;
-}
-
 .osu-container {
   align-items: center;
   display: flex;
