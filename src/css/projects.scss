@@ -15,27 +15,91 @@ header {
 
 .project-section {
   padding: 2rem;
+
   .project-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+
     .project-card {
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 0.8rem;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       width: 30vw;
-      height: auto;
       margin: 3rem;
       display: flex;
       flex-direction: column;
-      .project-image {
+      position: relative;
+      transition: all 0.3s ease;
+
+      .image-container {
+        position: relative;
         width: 100%;
         height: 40%;
-        object-fit: cover;
+        overflow: hidden;
+        border-radius: 0.8rem 0.8rem 0 0;
       }
+
+      .project-image-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-decoration: none;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.3s ease;
+      }
+
+      .project-description {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 10;
+
+        p {
+          color: white;
+          line-height: 1.6;
+          font-weight: 500;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      &:hover {
+        .project-image {
+          filter: blur(3px);
+        }
+        .project-description {
+          opacity: 1;
+          visibility: visible;
+        }
+        .project-link::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0.8rem;
+          width: 0;
+          height: 0.2rem;
+          background-color: #371100;
+          animation: underline 0.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) forwards;
+        }
+      }
+
       .project-info {
         padding: 1.5rem;
         display: flex;
@@ -50,15 +114,8 @@ header {
           font-weight: 700;
         }
 
-        p {
-          color: #371100;
-          line-height: 1.6;
-          font-weight: 500;
-          flex-grow: 1;
-        }
-
         .tags {
-          margin-top: 1rem;
+          margin-top: 0.5rem;
           display: flex;
           flex-wrap: wrap;
           gap: 0.5rem;
@@ -76,7 +133,9 @@ header {
           background-color: transparent;
           text-decoration: none;
           display: inline-flex;
-          gap: 2rem;
+          gap: 0.5rem;
+          position: relative;
+
           &:hover {
             transform: scale(1);
             &::after {
@@ -89,46 +148,46 @@ header {
               background-color: #371100;
               animation: underline 0.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) forwards;
             }
-            @keyframes underline {
-              0% {
-                width: 0;
-              }
-              100% {
-                width: 100%;
-              }
-            }
           }
-          .github-icon {
-            margin-top: -0.4rem;
-            width: 2rem;
-          }
+        }
+
+        .github-icon {
+          margin-top: -0.4rem;
+          width: 2rem;
         }
       }
     }
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 
 @media (max-width: 1100px) {
   .project-section {
     padding: 0;
+
     .project-container {
       justify-content: center;
       align-items: center;
+
       .project-card {
         width: 80vw;
-        .project-info {
-          .project-link {
-            animation: none; // removes hover animation on mobile
-          }
+
+        .project-info .project-link {
+          animation: none;
         }
+
         .project-image {
           height: 30vh;
         }
       }
     }
   }
-}
-
-@media (max-width: 575px) {
-
 }
