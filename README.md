@@ -11,6 +11,8 @@ I would like to extend my heartfelt thanks to:
 
 - **Benjamin Tissot**: For the beautiful "November" track that plays as background music
 
+- **铫**: For the beautiful background artwork ([Pixiv](https://www.pixiv.net/en/artworks/81046386))
+
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or just want to connect!
@@ -21,3 +23,10 @@ Feel free to reach out if you have any questions, suggestions, or just want to c
 
 ## For Self
 sass --watch src/css/:src/css/
+
+### TODO
+- Move osu! content into the main index page and make components for it
+- Update project section with improved background styling
+- Experiment with additional CSS animations and visual effects
+- Add interactive widgets to bottom left corner (expandable tabs, floating elements, etc.) to make the site feel more dynamic and engaging
+- Fix mobile centering and music and other image shit
