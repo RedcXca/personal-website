@@ -28,15 +28,68 @@ header h1 {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 30vw;
-  height: auto;
   margin: 3rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.project-section .project-container .project-card .image-container {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.project-section .project-container .project-card .project-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
 }
 .project-section .project-container .project-card .project-image {
   width: 100%;
-  height: 40%;
+  height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.project-section .project-container .project-card .project-description {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.project-section .project-container .project-card .project-description p {
+  color: white;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.project-section .project-container .project-card:hover .project-image {
+  filter: blur(3px);
+}
+.project-section .project-container .project-card:hover .project-description {
+  opacity: 1;
+  visibility: visible;
+}
+.project-section .project-container .project-card:hover .project-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.8rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #371100;
+  animation: underline 0.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) forwards;
 }
 .project-section .project-container .project-card .project-info {
   padding: 1.5rem;
@@ -51,14 +104,8 @@ header h1 {
   color: #333;
   font-weight: 700;
 }
-.project-section .project-container .project-card .project-info p {
-  color: #371100;
-  line-height: 1.6;
-  font-weight: 500;
-  flex-grow: 1;
-}
 .project-section .project-container .project-card .project-info .tags {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -74,7 +121,8 @@ header h1 {
   background-color: transparent;
   text-decoration: none;
   display: inline-flex;
-  gap: 2rem;
+  gap: 0.5rem;
+  position: relative;
 }
 .project-section .project-container .project-card .project-info .project-link:hover {
   transform: scale(1);
@@ -89,6 +137,11 @@ header h1 {
   background-color: #371100;
   animation: underline 0.5s cubic-bezier(0.51, 0.07, 0.27, 0.85) forwards;
 }
+.project-section .project-container .project-card .project-info .github-icon {
+  margin-top: -0.4rem;
+  width: 2rem;
+}
+
 @keyframes underline {
   0% {
     width: 0;
@@ -97,11 +150,6 @@ header h1 {
     width: 100%;
   }
 }
-.project-section .project-container .project-card .project-info .project-link .github-icon {
-  margin-top: -0.4rem;
-  width: 2rem;
-}
-
 @media (max-width: 1100px) {
   .project-section {
     padding: 0;
