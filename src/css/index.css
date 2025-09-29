@@ -123,6 +123,8 @@
   width: 30vw;
   height: auto;
   margin-right: 1rem;
+  vertical-align: top;
+  pointer-events: none;
 }
 
 @keyframes scrollGallery {

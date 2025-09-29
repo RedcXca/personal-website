@@ -354,3 +354,45 @@ footer {
     }
   }
 }
+
+.rain-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  
+  &.active {
+    opacity: 0.6;
+  }
+  
+  .rain-drop {
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: rainFall linear infinite;
+    border-radius: 1px;
+  }
+}
+
+@keyframes rainFall {
+  0% {
+    transform: translateY(-100vh) translateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(80px);
+    opacity: 0;
+  }
+}

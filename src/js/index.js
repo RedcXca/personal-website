@@ -61,8 +61,47 @@ function initBackgroundMusic() {
   });
 }
 
+function initRainEffect() {
+  const rainEffect = document.getElementById("rain-effect");
+  if (!rainEffect) return;
+  
+  rainEffect.classList.add("active");
+  createRainDrops();
+}
+
+function stopRainEffect() {
+  const rainEffect = document.getElementById("rain-effect");
+  if (!rainEffect) return;
+  
+  rainEffect.classList.remove("active");
+  rainEffect.innerHTML = "";
+}
+
+function createRainDrops() {
+  const rainEffect = document.getElementById("rain-effect");
+  if (!rainEffect) return;
+  
+  const rainCount = 50;
+  
+  for (let i = 0; i < rainCount; i++) {
+    const drop = document.createElement("div");
+    drop.className = "rain-drop";
+    
+    const left = Math.random() * 100;
+    const delay = Math.random() * 3;
+    const duration = 2 + Math.random() * 3;
+    
+    drop.style.left = left + "%";
+    drop.style.animationDelay = delay + "s";
+    drop.style.animationDuration = duration + "s";
+    
+    rainEffect.appendChild(drop);
+  }
+}
+
 $(function () {
   setNavbarHeight();
   initParallaxScrolling();
   initBackgroundMusic();
+  initRainEffect();
 });
