@@ -181,6 +181,31 @@ footer {
   }
 }
 
+// Music Control Widget
+#music-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.9);
+      transform: scale(1.1);
+    }
+  }
+}
+
 @media (max-width: 1100px) {
   .info-box-container {
     .info-box {

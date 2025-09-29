@@ -9,7 +9,7 @@ $(function () {
   const $leftArrow = $("#left-arrow");
   const $rightArrow = $("#right-arrow");
   const scrollAmount = 0.5 * window.innerWidth;
-  const ANIMATION_DURATION = 400; // ms, duration for gallery scroll animation
+  const ANIMATION_DURATION = 400;
 
   if ($galleryScroll.length && $leftArrow.length && $rightArrow.length) {
     function updateArrowVisibility() {
@@ -47,16 +47,57 @@ $(function () {
     });
 
     $galleryScroll.on("scroll", updateArrowVisibility);
-    
-    // Initialize arrow visibility on page load
     updateArrowVisibility();
   }
 
-  // Parallax scrolling effect for the .hero section
   window.addEventListener("scroll", function () {
     const parallax = document.querySelector(".hero");
     if (parallax) {
       parallax.style.backgroundPositionY = (window.pageYOffset / document.body.scrollHeight) * 70 + "px";
     }
   });
+
+  const backgroundMusic = document.getElementById("background-music");
+  const musicToggle = document.getElementById("music-toggle");
+  
+  if (backgroundMusic) {
+    backgroundMusic.volume = 0.2;
+    
+    const savedTime = parseFloat(localStorage.getItem('musicTime') || '1');
+    const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+    
+    backgroundMusic.currentTime = savedTime;
+    
+    if (isPlaying) {
+      backgroundMusic.play().catch(() => {});
+    }
+    
+    if (musicToggle) {
+      musicToggle.textContent = isPlaying ? "⏸" : "▶";
+      
+      musicToggle.addEventListener("click", () => {
+        if (backgroundMusic.paused) {
+          backgroundMusic.play();
+          musicToggle.textContent = "⏸";
+        } else {
+          backgroundMusic.pause();
+          musicToggle.textContent = "▶";
+        }
+      });
+    }
+    
+    backgroundMusic.addEventListener("play", () => {
+      musicToggle.textContent = "⏸";
+      localStorage.setItem('musicPlaying', 'true');
+    });
+    
+    backgroundMusic.addEventListener("pause", () => {
+      musicToggle.textContent = "▶";
+      localStorage.setItem('musicPlaying', 'false');
+    });
+    
+    backgroundMusic.addEventListener("timeupdate", () => {
+      localStorage.setItem('musicTime', backgroundMusic.currentTime);
+    });
+  }
 });
