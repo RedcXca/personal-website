@@ -94,8 +94,8 @@
         align-items: center;
         background: linear-gradient(94.94deg, #fd9e04, #ff4c01);
         border-radius: 75px;
-        white-space: nowrap; // Prevents text from wrapping
-        flex-shrink: 0; // Prevents the button from shrinking
+        white-space: nowrap;
+        flex-shrink: 0;
         &:hover {
           background: white;
           color: black;
@@ -105,6 +105,11 @@
       img {
         width: 4rem;
         height: 4rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
       }
     }
   }
@@ -116,7 +121,7 @@
   .gallery-scroll {
     overflow-x: auto;
     scroll-behavior: auto;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 0.8rem 1rem;
     width: 100%;
 
     // Hide scrollbar for IE, Edge and Firefox
@@ -135,7 +140,8 @@
       img {
         display: inline-block;
         width: 30vw;
-        height: auto;
+        height: calc(30vw * 9 / 16);
+        object-fit: cover;
         margin-right: 1rem;
         vertical-align: top;
         pointer-events: none;
@@ -371,6 +377,7 @@
       .gallery-content {
         img {
           width: 45vw;
+          height: calc(45vw * 9 / 16);
           margin-right: 0.5rem;
         }
       }

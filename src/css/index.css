@@ -97,6 +97,10 @@
 .hero-section ul a img {
   width: 4rem;
   height: 4rem;
+  transition: transform 0.3s ease;
+}
+.hero-section ul a:hover img {
+  transform: scale(1.1);
 }
 
 .gallery-container {
@@ -105,7 +109,7 @@
 .gallery-container .gallery-scroll {
   overflow-x: auto;
   scroll-behavior: auto;
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem 0.8rem 1rem;
   width: 100%;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -121,7 +125,8 @@
 .gallery-container .gallery-scroll .gallery-content img {
   display: inline-block;
   width: 30vw;
-  height: auto;
+  height: 16.875vw;
+  object-fit: cover;
   margin-right: 1rem;
   vertical-align: top;
   pointer-events: none;
@@ -329,6 +334,7 @@
   }
   .gallery-container .gallery-scroll .gallery-content img {
     width: 45vw;
+    height: 25.3125vw;
     margin-right: 0.5rem;
   }
   .title-info-container .title-info {
