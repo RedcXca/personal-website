@@ -6,48 +6,29 @@ if (navbar) {
 
 $(function () {
   const $galleryScroll = $(".gallery-scroll");
-  const $leftArrow = $("#left-arrow");
-  const $rightArrow = $("#right-arrow");
-  const scrollAmount = 0.5 * window.innerWidth;
-  const ANIMATION_DURATION = 400;
-
-  if ($galleryScroll.length && $leftArrow.length && $rightArrow.length) {
-    function updateArrowVisibility() {
+  
+  if ($galleryScroll.length) {
+    let scrollDirection = 1;
+    let scrollSpeed = 0.5;
+    
+    function autoScroll() {
       const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
       const scrollWidth = $galleryScroll[0].scrollWidth;
       const clientWidth = $galleryScroll[0].clientWidth;
-      if (currentScrollLeft <= 0) {
-        $leftArrow.removeClass("visible");
-      } else {
-        $leftArrow.addClass("visible");
-      }
+      
       if (currentScrollLeft + clientWidth >= scrollWidth) {
-        $rightArrow.removeClass("visible");
-      } else {
-        $rightArrow.addClass("visible");
+        scrollDirection = -1;
+      } else if (currentScrollLeft <= 0) {
+        scrollDirection = 1;
       }
+      
+      const newScrollLeft = currentScrollLeft + (scrollSpeed * scrollDirection);
+      $galleryScroll.scrollLeft(newScrollLeft);
+      
+      requestAnimationFrame(autoScroll);
     }
-
-    $leftArrow.on("click", function () {
-      const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
-      $galleryScroll.animate(
-        { scrollLeft: currentScrollLeft - scrollAmount },
-        ANIMATION_DURATION,
-        updateArrowVisibility
-      );
-    });
-
-    $rightArrow.on("click", function () {
-      const currentScrollLeft = $galleryScroll.scrollLeft() ?? 0;
-      $galleryScroll.animate(
-        { scrollLeft: currentScrollLeft + scrollAmount },
-        ANIMATION_DURATION,
-        updateArrowVisibility
-      );
-    });
-
-    $galleryScroll.on("scroll", updateArrowVisibility);
-    updateArrowVisibility();
+    
+    autoScroll();
   }
 
   window.addEventListener("scroll", function () {
