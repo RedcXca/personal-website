@@ -60,6 +60,10 @@
   text-align: center;
   margin: 0;
 }
+.project-section .project-container .project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 .project-section .project-container .project-card:hover .project-image {
   filter: blur(3px);
 }
