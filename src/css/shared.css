@@ -161,6 +161,67 @@ footer .small-footer-text {
   line-height: 1.8;
 }
 
+.content-section {
+  width: 100%;
+  background-color: #1f1f1f;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid #ff6b1a;
+  border-bottom: 3px solid #ff6b1a;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.button-container a {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  font-size: 1rem;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+}
+.button-container a:hover {
+  color: #fd9e04;
+  text-decoration: none;
+}
+
+.page-header {
+  height: 40vh;
+}
+.page-header h1 {
+  font-size: 4rem;
+  padding-top: 20vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #dedede;
+  font-weight: 900;
+}
+
+.section-heading {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #dedede;
+}
+
 #music-widget {
   position: fixed;
   bottom: 20px;
@@ -171,7 +232,7 @@ footer .small-footer-text {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: none;
+  border: 3px solid #ff6b1a;
   background: rgba(0, 0, 0, 0.8);
   color: white;
   font-size: 20px;
@@ -189,6 +250,9 @@ footer .small-footer-text {
   }
   .info-box-container .info-box h2, .info-box-container .info-box p {
     font-size: 1.2rem !important;
+  }
+  .page-header h1 {
+    font-size: 3rem;
   }
 }
 @media (max-width: 575px) {
