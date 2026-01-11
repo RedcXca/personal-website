@@ -3,6 +3,7 @@
     "build": "sass src/css/:src/css/ --no-source-map"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.30"
+    "@types/jquery": "^3.5.30",
+    "sass": "^1.97.2"
   }
 }
