@@ -106,13 +106,6 @@
 .gallery-section {
   padding: 2rem 0 0 0;
 }
-.gallery-section .section-heading {
-  margin-bottom: 0;
-}
-.gallery-section .button-container {
-  padding-top: 0.25rem;
-  padding-bottom: 0.75rem;
-}
 .gallery-section .gallery-scroll {
   overflow-x: auto;
   scroll-behavior: auto;
@@ -153,7 +146,7 @@
   }
 }
 .experience-section {
-  padding: 3rem 2rem;
+  padding: 0 2rem 2rem 2rem;
   max-width: 900px;
   margin: 0 auto 3rem auto;
 }
@@ -247,7 +240,7 @@
 
 @media (max-width: 768px) {
   .experience-section {
-    padding: 2rem 1rem;
+    padding: 0 1rem 1.5rem 1rem;
   }
   .experience-section .timeline::before {
     left: 2rem;
@@ -271,69 +264,8 @@
     font-size: 0.9rem;
   }
 }
-.clients-section {
-  padding: 2rem;
-  margin-bottom: 3rem;
-}
-.clients-section .clients-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.clients-section .client-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-}
-.clients-section .client-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
-}
-.clients-section .client-card span {
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-}
-.clients-section .client-card:hover span {
-  color: #fd9e04;
-}
-
-@media (max-width: 768px) {
-  .clients-section {
-    padding: 1.5rem 1rem;
-  }
-  .clients-section .clients-grid {
-    gap: 1rem;
-  }
-  .clients-section .client-card img {
-    width: 70px;
-    height: 70px;
-  }
-  .clients-section .client-card span {
-    font-size: 0.8rem;
-  }
-}
-.hidden {
-  display: none;
-}
-
-.section-box {
-  background-color: #1f1f1f;
-  border-top: 3px solid #ff6b1a;
-  border-bottom: 3px solid #ff6b1a;
-  padding: 1.5rem 2rem;
-  max-width: 700px;
-  width: 100%;
-}
-
 .about-section {
-  padding: 3rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   justify-content: center;
 }
@@ -430,9 +362,12 @@
     width: auto;
   }
   .hero-section ul a.commission-btn {
-    padding: 0.8rem 1.2rem;
+    padding: 0.5rem 1.2rem;
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
   }
   .hero-section ul a img {
     width: 2.5rem;
@@ -440,6 +375,9 @@
   }
 }
 @media (max-width: 575px) {
+  .experience-section {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+  }
   .hero-section {
     padding-top: 12vh;
   }
@@ -454,8 +392,9 @@
     height: 2rem;
   }
   .hero-section ul a.commission-btn {
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
     font-size: 0.85rem;
+    height: 2rem;
   }
   .gallery-section {
     padding: 1.5rem 1.5rem 0 1.5rem;
@@ -465,9 +404,6 @@
     height: 25.3125vw;
     margin-right: 0.5rem;
     border-radius: 0.5rem;
-  }
-  .experience-section {
-    padding: 1.5rem 0.75rem;
   }
   .experience-section .timeline::before {
     left: 1.75rem;

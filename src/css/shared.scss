@@ -161,35 +161,8 @@ footer {
   }
 }
 
-.info-box-container {
-  margin: 4rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-
-  .info-box {
-    width: 60vw;
-    background-color: #222222a9;
-    color: #ffffff;
-    border-radius: 3rem;
-    padding: 2rem;
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-      line-height: 1.8;
-    }
-  }
-}
-
 // Shared gray background section for galleries and content areas
-.content-section {
+.horizontal-box {
   width: 100%;
   background-color: #1f1f1f;
   position: relative;
@@ -198,14 +171,65 @@ footer {
   align-items: center;
   border-top: 3px solid #ff6b1a;
   border-bottom: 3px solid #ff6b1a;
+  margin-bottom: 4rem;
+
+  .section-heading {
+    padding-top: 1rem;
+  }
+
+  .section-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+// Clients section styles
+.clients-section {
+  .clients-grid {
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .client-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &:hover span {
+      color: #fd9e04;
+    }
+  }
 }
 
 // Shared button container styles
 .button-container {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
 
   a {
     cursor: pointer;
@@ -231,11 +255,11 @@ footer {
 
 // Shared page header styles
 .page-header {
-  height: 40vh;
+  height: 30vh;
 
   h1 {
     font-size: 4rem;
-    padding-top: 20vh;
+    padding-top: 15vh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -309,19 +333,33 @@ footer {
 }
 
 @media (max-width: 1100px) {
-  .info-box-container {
-    .info-box {
-      width: 70vw !important;
-      h2,
-      p {
-        font-size: 1.2rem !important;
-      }
-    }
-  }
-
   .page-header {
     h1 {
       font-size: 3rem;
+    }
+  }
+
+  .horizontal-box {
+    .section-text {
+      font-size: 1rem;
+    }
+  }
+
+  .clients-section {
+    .clients-grid {
+      padding: 0 1rem 1.5rem 1rem;
+      gap: 1rem;
+    }
+
+    .client-card {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -353,13 +391,10 @@ footer {
     }
   }
 
-  .info-box-container {
-    .info-box {
-      width: 90vw !important;
-      h2,
-      p {
-        font-size: 0.8rem !important;
-      }
+  .horizontal-box {
+    .section-text {
+      font-size: 0.9rem;
+      padding: 0 1rem 1.5rem 1rem;
     }
   }
 }
