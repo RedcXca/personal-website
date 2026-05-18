@@ -3,6 +3,18 @@
 
 Everything is in their respective html/css pages. I tried my best to make it beginner friendly for learning purposes.
 
+## Development
+
+This is a static site. It does not run on Node.js in production.
+
+`npm` is only used locally to compile SCSS into the checked-in CSS files:
+
+```bash
+npm run build
+```
+
+That script runs Sass over `src/css/` and writes the compiled `.css` files back into the same folder.
+
 ## Acknowledgements
 
 I would like to extend my heartfelt thanks to:
@@ -22,7 +34,10 @@ Feel free to reach out if you have any questions, suggestions, or just want to c
 - **osu!**: [redcxca](https://osu.ppy.sh/users/redcxca) <- Let's mutual!
 
 ## For Self
+
+```bash
 sass --watch src/css/:src/css/
+```
 
 ### TODO
 - Move osu! content into the main index page and make components for it
