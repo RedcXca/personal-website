@@ -1,20 +1,34 @@
 .project-box .project-shot-link {
+  position: relative;
   display: block;
   margin-bottom: 1.25rem;
-}
-.project-box .project-shot-link:hover .project-shot {
-  opacity: 0.85;
+  text-decoration: none;
 }
 .project-box .project-shot {
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
   display: block;
-  transition: opacity 0.2s ease;
 }
-.project-box .section-text {
+.project-box .project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(8, 8, 10, 0.82);
+  color: #fff;
   font-size: 1rem;
   line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-box .project-shot-link:hover .project-overlay,
+.project-box .project-shot-link:focus-visible .project-overlay {
+  opacity: 1;
 }
 .project-box .github-link {
   display: inline-flex;
@@ -29,8 +43,4 @@
 .project-box .github-link:hover .github-icon {
   opacity: 1;
   transform: translateY(-2px);
-}
-
-.continuation-section .section-text {
-  padding-bottom: 0;
 }
