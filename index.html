@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -17,8 +17,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link href="./src/css/shared.css" rel="stylesheet" />
-    <link href="./src/css/index.css" rel="stylesheet" />
+    <link href="./src/css/shared.css?v=20260813-1" rel="stylesheet" />
+    <link href="./src/css/index.css?v=20260814-2" rel="stylesheet" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
     </style>
@@ -109,7 +109,15 @@
           <img src="src/images/art/Wishful%20Wake.webp" alt="Wishful Wake Art" />
           <img src="src/images/art/osu!%20Winter%202023%20Fanart.webp" alt="osu! Winter 2023 Fanart" />
           <img src="src/images/art/Quartzshaper%20Editted.webp" alt="Quartzshaper Editted Art" />
-          <img src="src/images/art/osu!%20Beach%20Episode%20Fanart%20Censored.webp" alt="osu! Beach Episode Fanart" />
+          <span class="art-reveal" tabindex="0">
+            <img src="src/images/art/osu!%20Beach%20Episode%20Fanart%20Censored.webp" alt="osu! Beach Episode Fanart" />
+            <img
+              class="art-reveal-original"
+              src="src/images/art/osu!%20Beach%20Episode%20Fanart.webp"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
         </div>
       </div>
       <div class="button-container">
@@ -123,14 +131,25 @@
         </div>
         <div class="about-content">
           <h3>Hey, I'm Max!</h3>
-          <p>Some people might know me as RedcXca. But anyways, I'm a software engineering student at the University of Waterloo who likes to draw and play games like League and osu! in my free time.</p> <br>
-          <p>Some of my other hobbies include chess and badminton, I'm also looking forward to learning how to produce music this year!</p>
+          <p>
+            Some people might know me as RedcXca. But anyways, I'm a software engineering student at the University of
+            Waterloo who likes to draw and play games like League and osu! in my free time.
+          </p>
+          <br />
+          <p>
+            This year I'm trying to hit 1500 in blitz chess and finally finish Elden Ring (thanks vey3st for buying it
+            for me...)
+          </p>
         </div>
       </div>
     </section>
     <section class="horizontal-box clients-section">
       <h2 class="section-heading">Clients</h2>
       <div class="clients-grid">
+        <a href="https://www.yuc-e.com/" class="client-card" target="_blank">
+          <img src="src/images/icons/yuce.webp" alt="YUC'e" />
+          <span>YUC'e</span>
+        </a>
         <a href="https://open.spotify.com/artist/4Y345wfGiorcB2NXcsJxOt" class="client-card" target="_blank">
           <img src="src/images/icons/tpazolite.webp" alt="t+pazolite" />
           <span>t+pazolite</span>
@@ -187,6 +206,10 @@
           <img src="src/images/icons/takehirotei.webp" alt="Takehirotei" />
           <span>Takehirotei</span>
         </a>
+        <a href="https://www.linkedin.com/company/the-reckoner-of-mgci" class="client-card" target="_blank">
+          <img src="src/images/icons/reckoner.webp" alt="The Reckoner" />
+          <span>The Reckoner</span>
+        </a>
       </div>
     </section>
     <section class="vertical-box experience-section">
@@ -194,11 +217,11 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-icon">
-            <img src="src/images/logos/ivo.png" alt="Ivo AI" />
+            <img src="src/images/logos/ivo.webp" alt="Ivo" />
           </div>
           <div class="timeline-content">
             <span class="year">2026 · San Francisco</span>
-            <h3>Software Engineering Intern - Ivo AI</h3>
+            <h3>Software Engineering Intern at Ivo</h3>
             <p>Startup</p>
             <div class="tags">
               <span class="badge">React</span>
@@ -286,7 +309,7 @@
     </footer>
 
     <audio id="background-music" loop preload="auto">
-      <source src="src/audio/november.mp3" type="audio/mpeg">
+      <source src="src/audio/november.mp3" type="audio/mpeg" />
     </audio>
 
     <div class="rain-effect" id="rain-effect"></div>
