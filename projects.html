@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -17,8 +17,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link href="./src/css/shared.css" rel="stylesheet" />
-    <link href="./src/css/projects.css" rel="stylesheet" />
+    <link href="./src/css/shared.css?v=20260813-1" rel="stylesheet" />
+    <link href="./src/css/projects.css?v=20260813-1" rel="stylesheet" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
     </style>
@@ -58,87 +58,283 @@
     <header class="page-header">
       <h1>Projects</h1>
     </header>
-    <div class="box-grid">
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://osu-atlas.com" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/osu-atlas.webp" alt="osu! Atlas screenshot" />
-        <span class="project-overlay">click to hear some cool music</span>
-      </a>
-      <h2 class="section-heading">
-        osu! Atlas
-        <a class="github-link" href="https://github.com/RedcXca/osu-atlas" target="_blank" rel="noopener" aria-label="osu! Atlas on GitHub">
-          <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
-        </a>
-      </h2>
-    </section>
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://vey3st.art" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/vey3st.webp" alt="vey3st.art screenshot" />
-        <span class="project-overlay">A portfolio site I designed and built for the artist vey3st</span>
-      </a>
-      <h2 class="section-heading">vey3st.art</h2>
-    </section>
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://github.com/w4zEl/ArtificialPicasso" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/artificialpicasso.webp" alt="Artificial Picasso screenshot" />
-        <span class="project-overlay">
-          A robotic arm that draws on paper, with a GUI that turns any image into lineart for the arm to (loosely)
-          recreate
-        </span>
-      </a>
-      <h2 class="section-heading">
-        Artificial Picasso
-        <a class="github-link" href="https://github.com/w4zEl/ArtificialPicasso" target="_blank" rel="noopener" aria-label="Artificial Picasso on GitHub">
-          <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
-        </a>
-      </h2>
-    </section>
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://github.com/RedcXca/osu-catch" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/osucatch.webp" alt="osu!catch screenshot" />
-        <span class="project-overlay">
-          An osu!-inspired rhythm game where you catch falling notes to the beat, with dynamic hitboxes and scoring, plus
-          menu art by SJAO!
-        </span>
-      </a>
-      <h2 class="section-heading">
-        osu!catch
-        <a class="github-link" href="https://github.com/RedcXca/osu-catch" target="_blank" rel="noopener" aria-label="osu!catch on GitHub">
-          <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
-        </a>
-      </h2>
-    </section>
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://github.com/YJL3888/GooseGooseGo_CS348" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/goosegoosego.webp" alt="GooseGooseGo screenshot" />
-        <span class="project-overlay">
-          A restaurant review app with 100k+ items scraped from UberEats, plus secret discounts only a true Waterloo
-          foodie would know
-        </span>
-      </a>
-      <h2 class="section-heading">
-        GooseGooseGo
-        <a class="github-link" href="https://github.com/YJL3888/GooseGooseGo_CS348" target="_blank" rel="noopener" aria-label="GooseGooseGo on GitHub">
-          <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
-        </a>
-      </h2>
-    </section>
-    <section class="vertical-box project-box">
-      <a class="project-shot-link" href="https://github.com/RedcXca/Personal-Website" target="_blank" rel="noopener">
-        <img class="project-shot" src="src/images/projects/webpage.webp" alt="Personal Website screenshot" />
-        <span class="project-overlay">
-          This site is a showcase of my projects, art, and osu! stuff, and if you're here you're probably from art/osu
-          or looking to hire me (please)
-        </span>
-      </a>
-      <h2 class="section-heading">
-        Personal Website
-        <a class="github-link" href="https://github.com/RedcXca/Personal-Website" target="_blank" rel="noopener" aria-label="Personal Website on GitHub">
-          <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
-        </a>
-      </h2>
-    </section>
-    </div>
+    <main>
+      <section class="projects-group featured-project-group">
+        <div class="project-grid featured-project-grid">
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://osu-atlas.com" target="_blank" rel="noopener">
+              <img class="project-shot" src="src/images/projects/osu-atlas.webp" alt="osu! Atlas screenshot" />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://osu-atlas.com" target="_blank" rel="noopener">osu! Atlas</a>
+              <a
+                class="github-link"
+                href="https://github.com/RedcXca/osu-atlas"
+                target="_blank"
+                rel="noopener"
+                aria-label="osu! Atlas on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+        </div>
+      </section>
+      <section class="projects-group">
+        <h2 class="projects-group-heading">Design</h2>
+        <div class="project-grid">
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://vey3st.art" target="_blank" rel="noopener">
+              <img class="project-shot" src="src/images/projects/vey3st.webp" alt="vey3st portfolio preview" />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://vey3st.art" target="_blank" rel="noopener">vey3st</a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://caststation.ougonkyou.art" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/caststation.webp"
+                alt="channel portfolio preview"
+                loading="lazy"
+              />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://caststation.ougonkyou.art" target="_blank" rel="noopener"
+                >channel</a
+              >
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://saturn-illus.art" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/saturn.webp"
+                alt="Saturn Illustration portfolio preview"
+                loading="lazy"
+              />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://saturn-illus.art" target="_blank" rel="noopener"
+                >Saturn Illustration</a
+              >
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://xiaoraini.com" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/xiaoraini.webp"
+                alt="Xiaoraini portfolio preview"
+                loading="lazy"
+              />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://xiaoraini.com" target="_blank" rel="noopener">Xiaoraini</a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://takoyoomi.art" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/takoyoomi.webp"
+                alt="Takoyoomi portfolio preview"
+                loading="lazy"
+              />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://takoyoomi.art" target="_blank" rel="noopener">Takoyoomi</a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://www.essukaa.shop" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/essukaa.webp"
+                alt="Essukaa storefront preview"
+                loading="lazy"
+              />
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://www.essukaa.shop" target="_blank" rel="noopener">Essukaa</a>
+            </h3>
+          </article>
+        </div>
+      </section>
+      <section class="projects-group">
+        <h2 class="projects-group-heading">Others</h2>
+        <div class="project-grid">
+          <article class="vertical-box project-box">
+            <a
+              class="project-shot-link"
+              href="https://github.com/w4zEl/ChessEvolvedOffline"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="project-shot project-shot--contain"
+                src="src/images/projects/chess-evolved-offline.webp"
+                alt="Chess Evolved Offline board with custom pieces"
+                loading="lazy"
+              />
+              <span class="project-overlay">An offline chess variant featuring 26 custom-designed pieces</span>
+            </a>
+            <h3 class="section-heading">
+              <a
+                class="project-title-link"
+                href="https://github.com/w4zEl/ChessEvolvedOffline"
+                target="_blank"
+                rel="noopener"
+                >Chess Evolved Offline</a
+              >
+              <a
+                class="github-link"
+                href="https://github.com/w4zEl/ChessEvolvedOffline"
+                target="_blank"
+                rel="noopener"
+                aria-label="Chess Evolved Offline on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a
+              class="project-shot-link"
+              href="https://github.com/w4zEl/ArtificialPicasso"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="project-shot"
+                src="src/images/projects/artificialpicasso.webp"
+                alt="Artificial Picasso screenshot"
+                loading="lazy"
+              />
+              <span class="project-overlay">A robotic arm and GUI that turn images into line art drawn on paper</span>
+            </a>
+            <h3 class="section-heading">
+              <a
+                class="project-title-link"
+                href="https://github.com/w4zEl/ArtificialPicasso"
+                target="_blank"
+                rel="noopener"
+                >Artificial Picasso</a
+              >
+              <a
+                class="github-link"
+                href="https://github.com/w4zEl/ArtificialPicasso"
+                target="_blank"
+                rel="noopener"
+                aria-label="Artificial Picasso on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a class="project-shot-link" href="https://github.com/RedcXca/osu-catch" target="_blank" rel="noopener">
+              <img
+                class="project-shot"
+                src="src/images/projects/osucatch.webp"
+                alt="osu!catch screenshot"
+                loading="lazy"
+              />
+              <span class="project-overlay"
+                >An osu!-inspired rhythm game with dynamic hitboxes, scoring, and menu art by SJAO!</span
+              >
+            </a>
+            <h3 class="section-heading">
+              <a class="project-title-link" href="https://github.com/RedcXca/osu-catch" target="_blank" rel="noopener"
+                >osu!catch</a
+              >
+              <a
+                class="github-link"
+                href="https://github.com/RedcXca/osu-catch"
+                target="_blank"
+                rel="noopener"
+                aria-label="osu!catch on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a
+              class="project-shot-link"
+              href="https://github.com/YJL3888/GooseGooseGo_CS348"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="project-shot"
+                src="src/images/projects/goosegoosego.webp"
+                alt="GooseGooseGo screenshot"
+                loading="lazy"
+              />
+              <span class="project-overlay"
+                >A restaurant review app with more than 100,000 menu items and local discounts</span
+              >
+            </a>
+            <h3 class="section-heading">
+              <a
+                class="project-title-link"
+                href="https://github.com/YJL3888/GooseGooseGo_CS348"
+                target="_blank"
+                rel="noopener"
+                >GooseGooseGo</a
+              >
+              <a
+                class="github-link"
+                href="https://github.com/YJL3888/GooseGooseGo_CS348"
+                target="_blank"
+                rel="noopener"
+                aria-label="GooseGooseGo on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+          <article class="vertical-box project-box">
+            <a
+              class="project-shot-link"
+              href="https://github.com/RedcXca/Personal-Website"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="project-shot"
+                src="src/images/projects/webpage.webp"
+                alt="Personal Website screenshot"
+                loading="lazy"
+              />
+              <span class="project-overlay"
+                >This site, built to show my projects, illustration work, and osu! stuff</span
+              >
+            </a>
+            <h3 class="section-heading">
+              <a
+                class="project-title-link"
+                href="https://github.com/RedcXca/Personal-Website"
+                target="_blank"
+                rel="noopener"
+                >Personal Website</a
+              >
+              <a
+                class="github-link"
+                href="https://github.com/RedcXca/Personal-Website"
+                target="_blank"
+                rel="noopener"
+                aria-label="Personal Website on GitHub"
+              >
+                <img class="github-icon" src="src/images/svg/github.svg" alt="GitHub" />
+              </a>
+            </h3>
+          </article>
+        </div>
+      </section>
+    </main>
     <section class="horizontal-box continuation-section">
       <h2 class="section-heading">TO BE CONTINUED</h2>
       <p class="section-text">
@@ -148,12 +344,12 @@
     </section>
     <footer>
       <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
-      <p class="large-footer-text"><b>ART & DESIGN © 2024 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
+      <p class="large-footer-text"><b>ART & DESIGN © 2026 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
       <p class="small-footer-text">And some more small text probably no one is going to see.</p>
     </footer>
 
     <audio id="background-music" loop preload="auto">
-      <source src="src/audio/november.mp3" type="audio/mpeg">
+      <source src="src/audio/november.mp3" type="audio/mpeg" />
     </audio>
 
     <div class="rain-effect" id="rain-effect"></div>

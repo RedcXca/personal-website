@@ -10,12 +10,17 @@ section .illustrations-container {
   padding-bottom: 3rem;
   flex-wrap: wrap;
 }
-section .illustrations-container img {
+section .illustrations-container > img,
+section .illustrations-container > .art-reveal {
   width: 30vw;
+}
+section .illustrations-container .art-reveal img {
+  width: 100%;
 }
 
 @media (max-width: 1100px) {
-  section .illustrations-container img {
+  section .illustrations-container > img,
+  section .illustrations-container > .art-reveal {
     width: 45vw;
   }
 }

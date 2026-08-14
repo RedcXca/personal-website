@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -17,8 +17,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link href="./src/css/shared.css" rel="stylesheet" />
-    <link href="./src/css/osu.css" rel="stylesheet" />
+    <link href="./src/css/shared.css?v=20260813-1" rel="stylesheet" />
+    <link href="./src/css/osu.css?v=20260814-2" rel="stylesheet" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
     </style>
@@ -58,59 +58,76 @@
     <header class="page-header">
       <h1>osu!</h1>
     </header>
-    <div class="box-grid">
-      <section class="vertical-box osu-box">
-        <div class="osu-shot-wrap">
-          <img class="osu-shot" src="src/images/osu/ccc4.webp" alt="Canada Catch Cup 4 Champion" />
-          <span class="osu-overlay">
-            Canada Catch Cup 4 Champion, finally beating ian in a very tense 3 hour bracket reset match >:D
-          </span>
+    <section class="osu-resources-section" aria-labelledby="osu-resources-title">
+      <a
+        class="osu-resource-card"
+        href="https://drive.google.com/drive/folders/1G7X0lrWD6hkzXTTgRMNmVPCZBUANxHWo"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="src/images/svg/google-drive.svg" alt="" />
+        <div>
+          <h2 id="osu-resources-title">My osu! stuff</h2>
+          <span>My skin and some fun maps from all modes.</span>
         </div>
-        <h2 class="section-heading">CCC4 Champion</h2>
-      </section>
-      <section class="vertical-box osu-box">
-        <div class="osu-shot-wrap">
-          <img class="osu-shot" src="src/images/art/CWC%20Collab%202024.webp" alt="CWC Collab 2024 Art" />
-          <span class="osu-overlay">Top 4 at the osu! Catch World Cup 2024, playing for Canada at my first world cup</span>
-        </div>
-        <h2 class="section-heading">CWC Canada 2024</h2>
-      </section>
-      <section class="vertical-box osu-box">
-        <div class="osu-shot-wrap">
-          <img class="osu-shot" src="src/images/osu/3wc.webp" alt="3WC Podium" />
-          <span class="osu-overlay">Top 3 at the 3 Digit World Cup, one of my first international appearances</span>
-        </div>
-        <h2 class="section-heading">3WC Podium</h2>
-      </section>
-      <section class="vertical-box osu-box">
-        <div class="osu-shot-wrap">
-          <img class="osu-shot" src="src/images/osu/ccc.webp" alt="CCC Podium" />
-          <span class="osu-overlay">2nd at Canada Catch Cup 3, falling to Kelvin in grand finals 🥀</span>
-        </div>
-        <h2 class="section-heading">CCC Podium</h2>
-      </section>
-      <section class="vertical-box osu-box">
-        <div class="osu-shot-wrap">
-          <img class="osu-shot" src="src/images/osu/halftime.webp" alt="Halftime Rank 1" />
-          <span class="osu-overlay">
-            Most pp with the halftime mod, also won the Halftime Cup 2v2 doubles bracket with my teammate Leinou my goat
-          </span>
-        </div>
-        <h2 class="section-heading">Halftime Rank 1</h2>
-      </section>
-    </div>
-    <footer>
-      <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
-      <p class="large-footer-text"><b>ART & DESIGN © 2026 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
-      <p class="small-footer-text">And some more small text probably no one is going to see.</p>
-    </footer>
-
-    <audio id="background-music" loop preload="auto">
-      <source src="src/audio/november.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="rain-effect" id="rain-effect"></div>
-
+        <strong>Open Google Drive ↗</strong>
+      </a>
+    </section>
+    <section class="osu-achievements-section" aria-labelledby="osu-achievements-title">
+      <h2 id="osu-achievements-title">Highlights</h2>
+      <div class="box-grid osu-achievement-grid">
+        <article class="vertical-box project-box osu-achievement-card">
+          <div class="project-shot-link">
+            <img class="project-shot" src="src/images/osu/ccc4.webp" alt="Canada Catch Cup 4 Champion" loading="lazy" />
+            <span class="project-overlay">
+              Canada Catch Cup 4 champion after a tense three-hour bracket reset match against ian >:D
+            </span>
+          </div>
+          <h3 class="section-heading">CCC4 Champion</h3>
+        </article>
+        <article class="vertical-box project-box osu-achievement-card">
+          <div class="project-shot-link">
+            <img
+              class="project-shot"
+              src="src/images/art/CWC%20Collab%202024.webp"
+              alt="CWC Collab 2024 Art"
+              loading="lazy"
+            />
+            <span class="project-overlay">
+              Top 4 at the osu! Catch World Cup 2024, playing for Canada at my first world cup.
+            </span>
+          </div>
+          <h3 class="section-heading">CWC Canada 2024</h3>
+        </article>
+        <article class="vertical-box project-box osu-achievement-card">
+          <div class="project-shot-link">
+            <img class="project-shot" src="src/images/osu/3wc.webp" alt="3WC Podium" loading="lazy" />
+            <span class="project-overlay">
+              Top 3 at the 3 Digit World Cup, one of my first international appearances.
+            </span>
+          </div>
+          <h3 class="section-heading">3WC Podium</h3>
+        </article>
+        <article class="vertical-box project-box osu-achievement-card">
+          <div class="project-shot-link">
+            <img class="project-shot" src="src/images/osu/ccc.webp" alt="CCC Podium" loading="lazy" />
+            <span class="project-overlay"
+              >Second at Canada Catch Cup 3 after reaching grand finals against Kelvin.</span
+            >
+          </div>
+          <h3 class="section-heading">CCC Podium</h3>
+        </article>
+        <article class="vertical-box project-box osu-achievement-card">
+          <div class="project-shot-link">
+            <img class="project-shot" src="src/images/osu/halftime.webp" alt="Halftime Rank 1" loading="lazy" />
+            <span class="project-overlay">
+              Most pp with the halftime mod, plus a Halftime Cup 2v2 doubles win with Leinou.
+            </span>
+          </div>
+          <h3 class="section-heading">Halftime Rank 1</h3>
+        </article>
+      </div>
+    </section>
     <div class="widget-container">
       <a href="https://se-webring.xyz/" class="widget-button" target="_blank">
         <img src="src/images/logos/webring.webp" alt="SE Webring" class="widget-icon" />
@@ -119,6 +136,17 @@
         <button id="music-toggle">⏸</button>
       </div>
     </div>
+    <footer>
+      <p>Contact: <a href="mailto:maxzylu@gmail.com">maxzylu@gmail.com</a></p>
+      <p class="large-footer-text"><b>ART & DESIGN © 2026 BY REDCXCA. ALL RIGHTS RESERVED.</b></p>
+      <p class="small-footer-text">And some more small text probably no one is going to see.</p>
+    </footer>
+
+    <audio id="background-music" loop preload="auto">
+      <source src="src/audio/november.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="rain-effect" id="rain-effect"></div>
 
     <script src="src/js/index.js"></script>
   </body>
