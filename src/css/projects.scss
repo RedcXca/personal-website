@@ -1,53 +1,69 @@
-.project-box {
-  .project-shot-link {
-    position: relative;
-    display: block;
-    margin-bottom: 1.25rem;
-    text-decoration: none;
+.projects-group {
+  width: min(calc(100% - 2rem), 1440px);
+  margin: 0 auto 4rem auto;
+}
+
+.projects-group-heading {
+  margin: 0 0 1.5rem 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.featured-project-grid {
+  grid-template-columns: 1fr;
+}
+
+.project-shot--contain {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #1d2730;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.github-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.8;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.github-link:hover .github-icon {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.featured-project-group {
+  .section-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .projects-group {
+    width: min(calc(100% - 1rem), 1440px);
+    margin-bottom: 2.5rem;
   }
 
-  .project-shot {
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-    display: block;
-  }
-
-  // description fades in over the thumbnail on hover
-  .project-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    background: rgba(8, 8, 10, 0.82);
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .project-shot-link:hover .project-overlay,
-  .project-shot-link:focus-visible .project-overlay {
-    opacity: 1;
-  }
-
-  // github icon sits inline beside the title
-  .github-link {
-    display: inline-flex;
-    align-items: center;
-  }
-  .github-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    opacity: 0.8;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-  .github-link:hover .github-icon {
-    opacity: 1;
-    transform: translateY(-2px);
+  .project-grid {
+    gap: 1rem;
   }
 }

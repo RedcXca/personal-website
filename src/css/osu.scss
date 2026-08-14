@@ -1,37 +1,136 @@
-.osu-box {
-  justify-content: center;
+.osu-resources-section {
+  width: min(calc(100% - 2rem), 1100px);
+  margin: 0 auto 3rem auto;
+}
 
-  .osu-shot-wrap {
-    position: relative;
-    display: block;
-    margin-bottom: 1.25rem;
+.osu-resource-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  background: rgba(18, 18, 20, 0.94);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  > * {
+    min-width: 0;
   }
 
-  .osu-shot {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    display: block;
+  img {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
-  // description fades in over the screenshot on hover (not clickable)
-  .osu-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: rgba(8, 8, 10, 0.82);
-    color: #fff;
+  h2 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+
+  span {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
     font-size: 1rem;
-    line-height: 1.6;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    line-height: 1.5;
   }
-  .osu-shot-wrap:hover .osu-overlay {
-    opacity: 1;
+
+  strong {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -0.08em;
+      left: 0;
+      height: 2px;
+      content: "";
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+
+  &:hover strong::after,
+  &:focus-visible strong::after {
+    transform: scaleX(1);
+  }
+}
+
+.osu-achievements-section {
+  margin-bottom: 4rem;
+
+  > h2 {
+    width: min(calc(100% - 2rem), 1100px);
+    margin: 0 auto 1.5rem;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .osu-resource-card strong::after {
+    transition: none;
+  }
+}
+
+.osu-achievement-grid {
+  margin-bottom: 0;
+}
+
+.vertical-box.project-box.osu-achievement-card {
+  cursor: default;
+}
+
+@media (max-width: 575px) {
+  .osu-resources-section {
+    width: min(calc(100% - 1rem), 1100px);
+    margin-bottom: 2.5rem;
+  }
+
+  .osu-resource-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+
+    img {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+
+    strong {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .osu-achievements-section > h2 {
+    width: min(calc(100% - 1rem), 1100px);
+    font-size: 2rem;
+  }
+
+  .widget-container {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    z-index: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 2rem;
   }
 }

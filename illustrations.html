@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -17,8 +17,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link href="./src/css/shared.css" rel="stylesheet" />
-    <link href="./src/css/illustrations.css" rel="stylesheet" />
+    <link href="./src/css/shared.css?v=20260813-1" rel="stylesheet" />
+    <link href="./src/css/illustrations.css?v=20260813-1" rel="stylesheet" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
     </style>
@@ -69,6 +69,10 @@
         </a>
       </div>
       <div class="illustrations-container">
+        <img
+          src="src/images/art/Nasu%20Is%20Not%20Fruits%20Desu.webp"
+          alt="Nasu Is Not Fruits Desu! cover illustration"
+        />
         <img src="src/images/art/Gumbarlzo.webp" alt="Gumbarlzo" />
         <img src="src/images/art/Gear%20Up.webp" alt="Gear Up" />
         <img src="src/images/art/Clinozoisite.webp" alt="Clinozoisite" />
@@ -81,11 +85,22 @@
         <img src="src/images/art/Mainquest%20Text.webp" alt="Mainquest" />
         <img src="src/images/art/Clear%20Color.webp" alt="Clear Color" />
         <img src="src/images/art/Miku%2016th.webp" alt="Miku 16th" />
-        <img src="src/images/art/Sakura006%20Text%20Censored.webp" alt="Sakura006" />
+        <span class="art-reveal" tabindex="0">
+          <img src="src/images/art/Sakura006%20Text%20Censored.webp" alt="Sakura006" />
+          <img class="art-reveal-original" src="src/images/art/Sakura006%20Text.webp" alt="" aria-hidden="true" />
+        </span>
         <img src="src/images/art/Nazuna%20Mikeneko.webp" alt="Nazuna Mikeneko" />
         <img src="src/images/art/Onsen%20Eris.webp" alt="Onsen Eris" />
         <img src="src/images/art/osu!%20Aerial%20Antics%20Fanart.webp" alt="osu! Aerial Antics Fanart" />
-        <img src="src/images/art/osu!%20Beach%20Episode%20Fanart%20Censored.webp" alt="osu! Beach Episode Fanart" />
+        <span class="art-reveal" tabindex="0">
+          <img src="src/images/art/osu!%20Beach%20Episode%20Fanart%20Censored.webp" alt="osu! Beach Episode Fanart" />
+          <img
+            class="art-reveal-original"
+            src="src/images/art/osu!%20Beach%20Episode%20Fanart.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
         <img src="src/images/art/osu!%20Winter%202023%20Fanart.webp" alt="osu! Winter 2023 Fanart" />
         <img src="src/images/art/osu!%20Halloween%202022%20Fanart.webp" alt="osu! Halloween 2022 Fanart" />
         <img src="src/images/art/Wishful%20Wake.webp" alt="Wishful Wake" />
@@ -94,6 +109,10 @@
     <section class="horizontal-box clients-section">
       <h2 class="section-heading">Clients</h2>
       <div class="clients-grid">
+        <a href="https://www.yuc-e.com/" class="client-card" target="_blank">
+          <img src="src/images/icons/yuce.webp" alt="YUC'e" />
+          <span>YUC'e</span>
+        </a>
         <a href="https://open.spotify.com/artist/4Y345wfGiorcB2NXcsJxOt" class="client-card" target="_blank">
           <img src="src/images/icons/tpazolite.webp" alt="t+pazolite" />
           <span>t+pazolite</span>
@@ -150,6 +169,10 @@
           <img src="src/images/icons/takehirotei.webp" alt="Takehirotei" />
           <span>Takehirotei</span>
         </a>
+        <a href="https://www.linkedin.com/company/the-reckoner-of-mgci" class="client-card" target="_blank">
+          <img src="src/images/icons/reckoner.webp" alt="The Reckoner" />
+          <span>The Reckoner</span>
+        </a>
       </div>
     </section>
     <footer>
@@ -159,7 +182,7 @@
     </footer>
 
     <audio id="background-music" loop preload="auto">
-      <source src="src/audio/november.mp3" type="audio/mpeg">
+      <source src="src/audio/november.mp3" type="audio/mpeg" />
     </audio>
 
     <div class="rain-effect" id="rain-effect"></div>

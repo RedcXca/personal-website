@@ -9,22 +9,26 @@ section {
     gap: 2rem;
     padding-bottom: 3rem;
     flex-wrap: wrap;
-    img {
+    > img,
+    > .art-reveal {
       width: 30vw;
     }
-  }
 
+    .art-reveal img {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 1100px) {
   section {
     .illustrations-container {
-      img {
+      > img,
+      > .art-reveal {
         width: 45vw;
       }
     }
   }
-
 }
 
 @media (max-width: 575px) {
