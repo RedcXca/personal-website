@@ -42,7 +42,7 @@
   border-radius: 50%;
   width: 15rem;
   height: 15rem;
-  border: 5px solid #ff6b1a;
+  border: var(--accent-line-width) solid #ff6b1a;
   width: clamp(120px, 26vmin, 200px);
   height: clamp(120px, 26vmin, 200px);
   pointer-events: none;
