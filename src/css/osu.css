@@ -1,20 +1,11 @@
-.osu-resources-section {
-  width: min(100% - 2rem, 1100px);
-  margin: 0 auto 3rem auto;
-}
-
 .osu-resource-card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0.75rem;
-  background: rgba(18, 18, 20, 0.94);
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 .osu-resource-card > * {
   min-width: 0;
@@ -57,35 +48,12 @@
   transform: scaleX(1);
 }
 
-.osu-achievements-section {
-  margin-bottom: 4rem;
-}
-.osu-achievements-section > h2 {
-  width: min(100% - 2rem, 1100px);
-  margin: 0 auto 1.5rem;
-  color: #fff;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .osu-resource-card strong::after {
     transition: none;
   }
 }
-.osu-achievement-grid {
-  margin-bottom: 0;
-}
-
-.vertical-box.project-box.osu-achievement-card {
-  cursor: default;
-}
-
 @media (max-width: 575px) {
-  .osu-resources-section {
-    width: min(100% - 1rem, 1100px);
-    margin-bottom: 2.5rem;
-  }
   .osu-resource-card {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
@@ -103,10 +71,6 @@
   }
   .osu-resource-card strong {
     grid-column: 1/-1;
-  }
-  .osu-achievements-section > h2 {
-    width: min(100% - 1rem, 1100px);
-    font-size: 2rem;
   }
   .widget-container {
     position: relative;
