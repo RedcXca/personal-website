@@ -19,7 +19,7 @@ That script runs Sass over `src/css/` and writes the compiled `.css` files back 
 
 I would like to extend my heartfelt thanks to:
 - **Miyukiko**: For their invaluable encouragement and support (and uploading 100+ Miku pics for me)
-- **Slmlaggi**: For taking my not-rigged trade offer and improving the site 🚎
+- **linusc9516**: For taking my not-rigged trade offer and improving the site 🚎
 
 - **Benjamin Tissot**: For the "November" track that plays as background music
 
